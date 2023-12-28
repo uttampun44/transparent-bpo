@@ -1,10 +1,10 @@
 @include('./layouts/header')
 
 <main>
-    <section>
+    <section class="hero">
          <div  class="hero_section">
             <div class="overlay"></div>
-               <div class="hero_main">
+
                   <div class="home_main_container">
                     <div class="hero_section_rows">
                         <div class="hero_title">
@@ -18,20 +18,21 @@
                         <div class="hero_jobs_search">
                               <div class="title_search">
                                     <form>
-                                     <label> Find the job that best suits you. </label>
-                                        <select id="select_location">
-                                           <option>USA</option>
-                                           <option>Nepal</option>
-                                           <option>United Kingdom</option>
-                                           <option>Australia</option>
-                                           <option>India</option>
-                                        </select>
+                                     <div class="form_container_hero">
+                                        <label> Find the job that best suits you. </label>
+                                           <select id="select_location">
+                                              <option>USA</option>
+                                               <option>Nepal</option>
+                                               <option>United Kingdom</option>
+                                               <option>Australia</option>
+                                               <option>India</option>
+                                           </select>
                                         <input type="submit" value="search"/>
-                                    </form>
+                                       </form>
+                                     </div>
                               </div>
                         </div>
                     </div>
-                  </div>
                </div>
             </div>
         </div>
