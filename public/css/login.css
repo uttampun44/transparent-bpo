@@ -1,0 +1,104 @@
+@import url('./var.css');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.login_container{
+    max-width: 1300px;
+    margin: 0% auto;
+    padding: 2em 0em;
+}
+.login_cols{
+    display: flex;
+    height: 1024px;
+    justify-content: space-between;
+}
+.login_cols_one{
+    width: auto;
+    height: auto;
+}
+.form_icon img{
+    width: 68px;
+    height: auto;
+    object-fit: contain;
+}
+.login_cols_one{
+    width: 60%;
+}
+.login_cols_two{
+    padding: 3em 0em 2em 0em;
+    width: 40%;
+}
+.form_icon{
+    margin: 7em 0em 2em 0em;
+}
+.home_redirect a{
+  color: #5E6368;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var( --secondary-font-family);
+  text-align: center;
+  text-decoration: none;
+}
+.login_title p{
+    color:  var(--primary-color);
+    font-family: var(--primary-font-family);
+    font-weight: 600;
+    font-style: var(--font-style);
+    line-height: var(--line-height);
+    font-size: 2.2rem;
+}
+.form_explore label,
+.register label{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    font-style: normal;
+    line-height: normal;
+    font-family: var(--secondary-font-family);
+    text-align: left;
+    color: #5E6368;
+}
+
+.input_email_password input{
+    padding: .5em 0em .5em 1em;
+    border-radius: 10px;
+    border: 1px solid #E7E6E6;
+    background: var( --secondary-color);
+    width: 100%;
+    margin: 1em 0em 1em 0em;
+    color: #ABA3A9;
+    font-family: var(--secondary-font-family);
+    font-size: 1.5rem;
+    font-style: var(--font-style);
+    font-weight: 400;
+    line-height: var(--line-height);
+}
+.login_submit input{
+    padding: .5em 0em .5em 1em;
+    border: 1px solid #E7E6E6;
+    border-radius: 5px;
+    background: #04ADE6;
+    margin: 1em 0em 1em 0em;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font-family);
+    font-size: 1.5rem;
+    font-style: var(--font-style);
+    font-weight: 400;
+    line-height: var(--line-height);
+    width: 50%;
+    cursor: pointer;
+}
+.grid_cols{
+    display: grid;
+}
+.register a{
+    color: #04ADE6;
+    text-align: center;
+    font-family: var(--secondary-font-family);
+    font-size: 1.2rem;
+    font-style: var(--font-style);
+    font-weight: 600;
+    line-height: var(--line-height);
+    text-decoration: none;
+}

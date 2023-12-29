@@ -21,7 +21,7 @@
                        </div>
 
                        <div class="header_login">
-                          <a href=""> Login </a>
+                          <a href="{{url('login')}}"> Login </a>
                        </div>
                  </div>
            </div>

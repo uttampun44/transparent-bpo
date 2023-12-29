@@ -48,4 +48,5 @@
         </div>
     </section>
     @include('./layouts/featured')
+    @include('./layouts/footer')
 </main>
