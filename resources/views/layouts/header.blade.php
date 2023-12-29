@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Transparent BPO</title>
     <link rel="stylesheet" href="/css/index.css" >
 </head>
 <body>
@@ -12,7 +12,7 @@
       <div class="header_container">
            <div class="header_rows">
                  <div class="header_logo">
-                     <img src="{{ asset('/images/transparent-bpo-logo 1.png')}}" />
+                     <img src="{{ asset('/images/transparent-bpo-logo 1.png')}}" alt="header_image" />
                  </div>
                  <div class="header_login_findjobs">
                        <div class="header_links">
