@@ -33,8 +33,19 @@
                               </div>
                         </div>
                     </div>
+
+                    <div class="news_process">
+                        <div class="discover_recent_news">
+                             <p>Discover Recent News </p> <img src="{{asset('images/Arrow_1.png')}}" alt="arrow" />
+                        </div>
+
+                        <div class="know_all_process">
+                            <p>Know Your Process</p><img src="{{asset('images/Arrow_1.png')}}" alt="arrow" />
+                        </div>
+                   </div>
                </div>
             </div>
         </div>
     </section>
+    @include('./layouts/featured')
 </main>

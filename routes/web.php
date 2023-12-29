@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/home/{name}', function(string $name){
+    if($name){
+        return "<h1> $name </h1>";
+    }else{
+        return "<p> Name not found </p>";
+    }
+})->whereAlpha('name');

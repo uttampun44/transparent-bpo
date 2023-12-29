@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     padding: 0%;
     margin: 0%;
@@ -8,13 +9,17 @@
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.woff') format('woff');
 }
+
 :root{
     --primary-color : #000;
     --secondary-color : #FAFAFA;
     --font-weight-normal: 400;
     --font-line-height: normal;
     --primary-font-family: 'Roboto';
+    --secondary-font-family: 'Open Sans', sans-serif;
     --font-size: 16px;
+    --div-bg-color:#FFDE7F;
+    --primary-border: 5px;
 }
 
 header{
@@ -22,6 +27,8 @@ header{
     position: relative;
     width: 100%;
     z-index: 999;
+    background: linear-gradient(180deg, rgba(0, 46, 91, 0.90) 0%, rgba(52, 124, 151, 0.10) 99.99%, rgba(250, 250, 250, 0.00) 100%);
+    background-blend-mode: multiply;
 }
  .header_rows {
    display: flex;
@@ -33,13 +40,27 @@ header{
 .header_login_findjobs{
     display: flex;
     align-items: center;
-    column-gap: 1em;
+    column-gap: 2em;
 }
 .header_links {
     display: flex;
-    column-gap: 1em;
+    column-gap: 2em;
 }
-.header_login_findjobs a{
+.header_login{
+    background-color: var(--div-bg-color);
+    padding: .5em 3em;
+    border-radius: var(--primary-border);
+}
+.header_login a{
+    color: #000;
+    text-decoration: none;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-line-height);
+    font-size: 1.5em;
+    font-family: var(--primary-font-family);
+}
+
+.header_login_findjobs .header_links a{
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: var(--font-weight-normal);
@@ -51,9 +72,6 @@ header{
     background-image: url('../images/hero_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    background-color: linear-gradient(90deg, rgba(0, 46, 91, 0.50) 52.6%, rgba(31, 138, 190, 0.50) 98.44%);
-    background-blend-mode: multiply;
 }
 
 .home_main_container{
@@ -76,7 +94,7 @@ header{
     font-weight: var(--font-weight-normal);
     font-style: normal;
     line-height: normal;
-    font-family: var(--primary-font-family);
+    font-family: var(--secondary-font-family);
     text-align: left;
     color: var(--secondary-color);
 }
@@ -104,11 +122,15 @@ header{
 .title_search{
     text-align: left;
 }
+.hero{
+    position: relative;
+}
 .hero_section_rows{
     margin: 5em 0em;
 }
 .hero_jobs_search{
     width: 80%;
+    min-width: fit-content;
 }
 .form_container_hero{
     display: flex;
@@ -139,8 +161,70 @@ header{
 .home_main_container{
     position: relative;
 }
-.hero{
-    position: absolute;
-    width: 100%;
-    top: 0;
+
+.news_process{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    min-width: fit-content;
+}
+.news_process img{
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+.discover_recent_news,
+.know_all_process{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    background-color: var(--div-bg-color);
+    padding: 1.5em 1.8em;
+    border-radius: var(--primary-border);
+    width: 45%;
+    justify-content: space-between;
+}
+.discover_recent_news p,
+.know_all_process p{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    font-family: var(--secondary-font-family);
+    line-height: normal;
+    font-style: normal;
+    letter-spacing: 0.16px;
+}
+
+/* featured section */
+.featured_container{
+    max-width: 1300px;
+    margin: 4em auto;
+}
+.featured_title_rows{
+    display: flex;
+    justify-content: space-between;
+}
+.explore_more{
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+}
+.featured_title strong{
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+}
+.explore_more p{
+    font-size: 1.5rem;
+    font-family: var(--primary-font-family);
+    font-weight: var(--font-weight-normal);
+    line-height: normal;
+}
+.explore_more img{
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
 }
