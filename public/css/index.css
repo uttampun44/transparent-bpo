@@ -1,27 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.woff') format('woff');
-}
-
-:root{
-    --primary-color : #000;
-    --secondary-color : #FAFAFA;
-    --font-weight-normal: 400;
-    --font-line-height: normal;
-    --primary-font-family: 'Roboto';
-    --secondary-font-family: 'Open Sans', sans-serif;
-    --font-size: 16px;
-    --div-bg-color:#FFDE7F;
-    --primary-border: 5px;
-}
-
+@import url('./var.css');
 header{
     padding: 1.5em 0em;
     position: relative;
@@ -227,4 +204,69 @@ header{
     height: auto;
     object-fit: contain;
     cursor: pointer;
+}
+
+/* footer */
+footer{
+    background-color: #002E5B;
+}
+.footer_container{
+    max-width: 1300px;
+    margin: 0% auto;
+    padding: 4em 0em 2em 0em;
+}
+.footer_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer_row_title{
+    margin: 2.1em 0em;
+}
+.footer_row_title strong,
+.footer_row_two strong,
+.footer_row_three strong,
+.footer_row_four strong{
+    color: var(--secondary-color);
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    line-height: normal;
+    font-size: 1.5rem;
+}
+.footer_row_title hr,
+.footer_row_two hr,
+.footer_row_three hr,
+.footer_row_four hr{
+    border: 1px solid var(--div-bg-color);
+    width: 50%;
+    margin: .5em 0em;
+}
+.footer_row_title p{
+    padding: 1em 0em;
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-color);
+    font-family: var(--font-weight-normal);
+    line-height: normal;
+    font-size: 1rem;
+}
+.jobs_service ul li a,
+.footer_row_three ul li a,
+.jobs_setup ul li a,
+.copyrights_footer p{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.8rem;
+}
+.jobs_service ul li,
+.footer_row_three ul li,
+.jobs_setup ul li{
+    margin: .5em 0em;
+}
+.copyrights_footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0em;
 }
