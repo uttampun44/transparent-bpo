@@ -24,6 +24,11 @@ Route::get('/home/{name}', function(string $name){
         return "<p> Name not found </p>";
     }
 })->whereAlpha('name');
+
 Route::get('/login', function(){
     return view('login');
 })->name('login');
+
+Route::get('/register', function(){
+    return view('register');
+})->name('register');
