@@ -36,14 +36,15 @@
                                              <div class="input_email_password">
                                                 <input type="text" name="username_email" placeholder="Email or Username" />
                                                 <input type="password" name="password" placeholder="Password" />
+                                                <input type="text" name="phone" placeholder="phone" />
                                              </div>
 
                                              <div class="login_submit">
-                                              <input type="submit" name="submit" value="Login" />
+                                              <input type="submit" name="submit" value="Register" />
                                              </div>
 
                                              <div class="register">
-                                                 <label>Don’t have an account yet?</label>&nbsp;<a href="{{url('register')}}"> Register</a>
+                                                 <label>Already have an account?</label>&nbsp;<a href="{{route('login')}}">Login</a>
                                              </div>
                                          </div>
                                       </form>
