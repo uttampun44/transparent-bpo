@@ -26,7 +26,7 @@
                                   </div>
                                   <div class="login_title">
                                       <p>Login to your account.</p>
-                                      <form method="POST" action="">
+                                      <form method="POST" action="{{url('/')}}/formdata">
                                         @csrf
                                            <div class="grid_cols">
                                              <div class="form_explore">
@@ -34,9 +34,22 @@
                                              </div>
 
                                              <div class="input_email_password">
-                                                <input type="text" name="username_email" placeholder="Email or Username" />
+                                                <input type="text" name="email" placeholder="Email or Username" value="{{old('email')}}" />
+                                                @error('email')
+                                                    {{$message}}
+                                                @enderror
                                                 <input type="password" name="password" placeholder="Password" />
-                                                <input type="text" name="phone" placeholder="phone" />
+                                                @error('password')
+                                                      {{$message}}
+                                                @enderror
+                                                <input type="text" name="phone" placeholder="phone" value="{{old('phone')}}"/>
+                                                    @error('phone')
+                                                       {{$message}}
+                                                    @enderror
+                                                <select name="profession">
+                                                    <option>Job Seeker</option>
+                                                    <option>Employer</option>
+                                                </select>
                                              </div>
 
                                              <div class="login_submit">
@@ -44,8 +57,15 @@
                                              </div>
 
                                              <div class="register">
-                                                 <label>Already have an account?</label>&nbsp;<a href="{{route('login')}}">Login</a>
+                                                 <label>Already have an account?</label>&nbsp;<a href="{{url('login')}}">Login</a>
                                              </div>
+
+                                             @if(Session::has('Success'))
+                                                  <div class="register_success"><p>Register Sucessfully</p> </div>
+                                             @endif
+                                               @if(Session::has('Fail'))
+                                                   <div class="fail_register"><p>Fail to register</p></div>
+                                               @endif
                                          </div>
                                       </form>
                                   </div>

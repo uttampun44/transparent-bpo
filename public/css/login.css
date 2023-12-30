@@ -31,7 +31,7 @@
     width: 40%;
 }
 .form_icon{
-    margin: 7em 0em 2em 0em;
+    margin: 5em 0em 2em 0em;
 }
 .home_redirect a{
   color: #5E6368;
@@ -60,7 +60,8 @@
     color: #5E6368;
 }
 
-.input_email_password input{
+.input_email_password input,
+.input_email_password select{
     padding: .5em 0em .5em 1em;
     border-radius: 10px;
     border: 1px solid #E7E6E6;
@@ -101,4 +102,23 @@
     font-weight: 600;
     line-height: var(--line-height);
     text-decoration: none;
+}
+.register_success {
+    margin: 1em 0em;
+    background-color: #28a745;
+    padding: 1em;
+    border-radius: 5px;
+}
+.register_success p,
+.fail_register p{
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-normal);
+    font-family: var(--secondary-font-family);
+    color: #fff;
+}
+.fail_register{
+    margin: 1em 0em;
+    background-color: #dc3545;
+    padding: 1em;
+    border-radius: 5px;
 }

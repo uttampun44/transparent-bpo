@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Register;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,18 +17,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/home/{name}', function(string $name){
-    if($name){
-        return "<h1> $name </h1>";
-    }else{
-        return "<p> Name not found </p>";
-    }
-})->whereAlpha('name');
+// login user
+Route::get('/login', [Register::class, 'Login'])->name('login');
+Route::post('/loginuser', [Register::class, 'loginUser'])->name('loginuser');
 
-Route::get('/login', function(){
-    return view('login');
-})->name('login');
+// register user
+Route::get('/register', [Register::class, 'Register']);
+Route::post('/formdata', [Register::class, 'data']);
 
-Route::get('/register', function(){
-    return view('register');
-})->name('register');
+Route::get('/employer-dashboard', [Register::class, 'employerDashboard']);
+Route::get('/jobseeker-dashboard', [Register::class, 'jobseekerDashboard']);
