@@ -15,7 +15,10 @@
                   </div>
 
                   <div class="header_admin_logout">
-                       <a href="{{url('/')}}">Logout</a>
+                        <form action="{{ url('/') }}" method="post">
+                              @csrf
+                              <button type="submit"><a href="{{url('/')}}">Logout</a></button>
+                          </form>
                   </div>
 
                 </div>
