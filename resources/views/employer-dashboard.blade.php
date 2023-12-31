@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Transparent BPO</title>
-</head>
-<body>
-       <main>
-        <section>
-            <div class="employer_container">
-                <h1>Employeer container</h1>
-            </div>
-        </section>
-       </main>
-</body>
-</html>
+@include('./layouts/admin-header')
+<main>
+    <section>
+        <div class="employer_container">
+           <div class="employer_admin_row">
+                <div class="employer_admin_siderbar">
+                    <aside>
+                         <ul>
+                            <li><p>Dashboard</p></li>
+                            <li><p>My Profile</p></li>
+                            <li><p>Job Post</p></li>
+                            <li><p>Settings</p></li>
+                          </ul>
+                    </aside>
+                 </div>
+           </div>
+        </div>
+    </section>
+   </main>
