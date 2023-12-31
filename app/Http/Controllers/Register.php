@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 class Register extends Controller
 {
-    public function Register(){
+    public function Signup(){
         return view('register');
     }
 
@@ -51,13 +51,14 @@ class Register extends Controller
 
         $user = Registeruser::where('email', $request->email)->first();
 
+
         if ($user) {
             if (Hash::check($request->password, $user->password)) {
-                $request->session()->put('user_id', $user->id);
+                $request->session()->put('user_id', $user->userd_id);
 
                 $profession = strtolower($user->profession);
 
-                if($profession == "Job Seeker"){
+                if(strpos($profession, 'job seeker') !== false){
                     return redirect('jobseeker-dashboard')->with('Success', 'Login Successfully');
                 }else{
                     return redirect('employer-dashboard')->with('Success', 'Login Successfully');
@@ -80,4 +81,13 @@ class Register extends Controller
     public function jobseekerDashboard(){
         return view('jobseeker-dashboard');
     }
+
+    // logout functionality
+    public function logout(){
+
+        if(Session::has('user_id')){
+              Session::forget('user_id');
+              return redirect('login')->with('success', 'You have been logged out successfully.');
+        }
+   }
 }

@@ -25,7 +25,7 @@
                                       <img src="{{asset('images/login_form.png')}}"  alt="form_login_icon"/>
                                   </div>
                                   <div class="login_title">
-                                      <p>Login to your account.</p>
+                                      <p>Signup </p>
                                       <form method="POST" action="{{url('/')}}/formdata">
                                         @csrf
                                            <div class="grid_cols">
