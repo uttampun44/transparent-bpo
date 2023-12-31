@@ -1,6 +1,8 @@
-let loginButton = document.querySelector('#login_submit');
+// document.addEventListener('DOMContentLoaded', function () {
+//     let logoutForm = document.querySelector('#logout-form');
 
-
-loginButton.addEventListener('click', function(){
-
-})
+//     logoutForm.addEventListener('submit', function (event) {
+//         event.preventDefault();
+//         this.submit();
+//     });
+// });
