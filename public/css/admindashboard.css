@@ -1,0 +1,64 @@
+@import url('./var.css');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+header{
+    background: linear-gradient(180deg, #002E5B 0%, #04ADE6 100%);
+    padding: 2em 0em;
+}
+.header_admin_container{
+    max-width: 1300px;
+    margin: 0% auto;
+}
+.header_rows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_admin_logout{
+    background-color: var(--div-bg-color);
+    padding: 0.5em 3em;
+    border-radius: var(--primary-border);
+}
+.header_admin_logout a{
+    color: #000;
+    text-decoration: none;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-line-height);
+    font-size: 1.5em;
+    font-family: var(--primary-font-family);
+}
+
+.employer_admin_siderbar{
+ position: absolute;
+ left: 0%;
+ height: 100%;
+}
+.employer_admin_siderbar aside{
+  height: 100%;
+}
+.employer_admin_siderbar aside ul{
+  row-gap: 1.5em;
+  background-color: #6C5DD3;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+.employer_admin_siderbar aside ul li p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+    color: var(--secondary-color);
+    padding: 1.5em 2em;
+    cursor: pointer;
+}
+.employer_admin_siderbar aside ul li:hover{
+    background-color: var(--secondary-color);
+}
+.employer_admin_siderbar aside ul li p:hover{
+    color: var(--primary-color);
+}
