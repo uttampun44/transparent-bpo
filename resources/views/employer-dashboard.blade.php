@@ -13,6 +13,12 @@
                           </ul>
                     </aside>
                  </div>
+
+                 <div class="job_post_container">
+                      <div class="jobs_title">
+                         <h1>Job post</h1>
+                      </div>
+               </div>
            </div>
         </div>
     </section>

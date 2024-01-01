@@ -66,3 +66,32 @@ header{
 .employer_admin_siderbar aside ul li p:hover{
     color: var(--primary-color);
 }
+
+.job_post_container{
+    position: absolute;
+    width: 100%;
+    left: 20%;
+    max-width: 75%;
+    width: 100%;
+    padding: 2em;
+    margin: 1em 0em;
+    border-radius: 15px;
+    background:  #FCFCFC;
+}
+.job_post_container h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+    color: #808191;
+    padding: 1.5em 2em;
+}
+.employer_admin_row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    height: 100vh;
+    background-color: #F7F7F7;
+}
+.employer_container{
+    position: relative;
+}
