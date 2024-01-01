@@ -270,3 +270,48 @@ footer{
     justify-content: space-between;
     margin: 1em 0em;
 }
+
+/* featured jobs data */
+
+.display_featured_jobs{
+    margin: 2em 0em;
+}
+.jobs_cols{
+    display: grid;
+    row-gap: 1em;
+    border-radius: 20px;
+    border: 0.5px solid #EBF1FA;
+    background: #FAFAFA;
+    box-shadow: 8px 8px 16px 4px rgba(137, 143, 150, 0.04);
+    padding: 1em;
+}
+.job_title p{
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.orgnization p{
+    font-weight: 400;
+    font-family: var(--primary-font-family);
+    color: #5E6368;
+    font-size: 1.5rem;
+}
+.jobs_rows{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.apply_now{
+    border-radius: 5px;
+    background: #04ADE6;
+    padding: 1em;
+    text-align: center;
+}
+.apply_now a{
+    color: #FAFAFA;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}

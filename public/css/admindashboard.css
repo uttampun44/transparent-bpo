@@ -38,8 +38,6 @@ header{
 }
 
 .employer_admin_siderbar{
- position: absolute;
- left: 0%;
  height: 100%;
 }
 .employer_admin_siderbar aside{
@@ -47,7 +45,7 @@ header{
 }
 .employer_admin_siderbar aside ul{
   row-gap: 1.5em;
-  background-color: #6C5DD3;
+  background-color: rgb(31 41 55);
   align-items: center;
   justify-items: center;
   height: 100%;
@@ -68,15 +66,14 @@ header{
 }
 
 .job_post_container{
-    position: absolute;
-    width: 100%;
-    left: 20%;
-    max-width: 75%;
     width: 100%;
     padding: 2em;
-    margin: 1em 0em;
+    margin: 3em 2em;
     border-radius: 15px;
-    background:  #FCFCFC;
+    background: #FCFCFC;
+    height: 100%;
+    display: grid;
+    justify-content: center;
 }
 .job_post_container h1{
     font-size: 1.5rem;
@@ -86,12 +83,37 @@ header{
     padding: 1.5em 2em;
 }
 .employer_admin_row{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    position: relative;
-    height: 100vh;
+     display: flex;
     background-color: #F7F7F7;
-}
-.employer_container{
     position: relative;
+}
+.job_post_form .job_form_cols {
+    display: grid;
+    row-gap: 1.5em;
+}
+.job_form_cols input,
+.job_form_cols select,
+.job_form_cols textarea{
+    margin: 1em 0em;
+    padding: 1em;
+}
+.job_form_cols textarea{
+  height: 10em;
+  width: 100%;
+}
+.job_form_cols label{
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: 1rem;
+}
+.submit_job_post input{
+    background-color: cadetblue;
+    border-radius: 10px;
+    color: #F7F7F7;
+    font-family: var(--primary-font-family);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
 }

@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Register;
-
+use App\Http\Controllers\Jobpost;
 use App\Http\Middleware\Authcheck;
+use App\Http\Controllers\Viewjob;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,9 +18,8 @@ use App\Http\Middleware\Authcheck;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+Route::get('/', [Viewjob::class, 'View'])->name('/');
 
 // login user
 Route::get('/login', [Register::class, 'Login'])->name('login');
@@ -27,9 +29,14 @@ Route::post('/loginuser', [Register::class, 'loginUser'])->name('loginuser');
 Route::get('/register', [Register::class, 'Signup']);
 Route::post('/formdata', [Register::class, 'data']);
 
-Route::get('/employer-dashboard', [Register::class, 'employerDashboard'])->middleware(Authcheck::class);
+Route::get('/employer-dashboard', [Register::class, 'employerDashboard']);
 Route::get('/jobseeker-dashboard', [Register::class, 'jobseekerDashboard']);
 
 
 // logout
 Route::get('/logout', [Register::class, 'logout'])->name('logout');
+
+
+// job post
+Route::get('/employer-dashboard', [Jobpost::class, 'employer']);
+Route::post('/jobpost', [Jobpost::class, 'Job'] );
