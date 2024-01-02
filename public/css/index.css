@@ -283,7 +283,14 @@ footer{
     border: 0.5px solid #EBF1FA;
     background: #FAFAFA;
     box-shadow: 8px 8px 16px 4px rgba(137, 143, 150, 0.04);
+}
+.job_icon img{
+  width: 100%;
+}
+.job_description_content{
     padding: 1em;
+    display: grid;
+    row-gap: 1em;
 }
 .job_title p{
     font-weight: 700;
@@ -291,7 +298,8 @@ footer{
     color: var(--primary-color);
     font-size: 1.5rem;
 }
-.orgnization p{
+.orgnization p,
+.job_type p{
     font-weight: 400;
     font-family: var(--primary-font-family);
     color: #5E6368;
@@ -314,4 +322,58 @@ footer{
     font-style: normal;
     font-weight: 700;
     text-decoration: none;
+}
+.job_type {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+}
+
+
+/* workspace css */
+.work_space{
+    background-image: url('../images/workplace.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.workspace_container{
+    max-width: 1300px;
+    margin: 0% auto;
+    padding: 6em 0em;
+    position: relative;
+}
+.workspace_cols {
+    display: grid;
+    row-gap: 2em;
+    justify-content: center;
+    margin: 4em 0em;
+}
+.workspace_cols .workspace_title h2{
+    color: #FAFAFA;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+.join_us {
+    border-radius: 5px;
+    background: #04ADE6;
+    text-align: center;
+    padding: 1em 1em;
+    width: 40%;
+    margin: 0% auto;
+}
+.join_us a{
+ color: #FAFAFA;
+text-align: center;
+font-family: Open Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+text-decoration: none;
 }

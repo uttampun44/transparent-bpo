@@ -48,5 +48,21 @@
         </div>
     </section>
     @include('./layouts/featured')
+
+    {{-- worksapace --}}
+
+     <section class="work_space">
+        <div class="overlay"></div>
+            <div class="workspace_container">
+                     <div class="workspace_cols">
+                           <div class="workspace_title">
+                                 <h2>We're more than just <br>a workplace. We're a family.</h2>
+                           </div>
+                           <div class="join_us">
+                                 <a href="#">Join Us</a>
+                           </div>
+                     </div>
+            </div>
+     </section>
     @include('./layouts/footer')
 </main>
