@@ -1,0 +1,379 @@
+@import url('./var.css');
+header{
+    padding: 1.5em 0em;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(180deg, rgba(0, 46, 91, 0.90) 0%, rgba(52, 124, 151, 0.10) 99.99%, rgba(250, 250, 250, 0.00) 100%);
+    background-blend-mode: multiply;
+}
+ .header_rows {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1300px;
+   margin: 0% auto;
+}
+.header_login_findjobs{
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+}
+.header_links {
+    display: flex;
+    column-gap: 2em;
+}
+.header_login{
+    background-color: var(--div-bg-color);
+    padding: .5em 3em;
+    border-radius: var(--primary-border);
+}
+.header_login a{
+    color: #000;
+    text-decoration: none;
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-line-height);
+    font-size: 1.5em;
+    font-family: var(--primary-font-family);
+}
+
+.header_login_findjobs .header_links a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--font-line-height);
+    font-size: 1.5em;
+    font-family: var(--primary-font-family);
+}
+.hero_section{
+    background-image: url('../images/hero_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home_main_container{
+    max-width: 1300px;
+    margin: 4em auto;
+    padding: 4em 0em;
+}
+.hero_title h1{
+   font-size: 3rem;
+   font-weight: 600;
+   font-family: var(--primary-font-family);
+   color: var(--secondary-color);
+   text-align: left;
+}
+.hero_para{
+    margin: 1em 0em;
+}
+.hero_para p{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    font-style: normal;
+    line-height: normal;
+    font-family: var(--secondary-font-family);
+    text-align: left;
+    color: var(--secondary-color);
+}
+.hero_jobs_search{
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 1.5em 1.2em;
+}
+.title_search label{
+    color: #1E1E1E;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#select_location{
+    border: none;
+    background: none;
+    font-size: var(--font-size);
+    font-weight: 400;
+    font-family: var(--primary-font-family);
+    line-height: normal;
+    width: 25%;
+}
+.title_search{
+    text-align: left;
+}
+.hero{
+    position: relative;
+}
+.hero_section_rows{
+    margin: 5em 0em;
+}
+.hero_jobs_search{
+    width: 80%;
+    min-width: fit-content;
+}
+.form_container_hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form_container_hero input{
+    width: 25%;
+    padding: .4em 0em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--primary-font-family);
+    border-radius: 5px;
+    background: #04ADE6;
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 46, 91, 0.90) 0%, rgba(52, 124, 151, 0.10) 99.99%, rgba(250, 250, 250, 0.00) 100%);
+    background-blend-mode: multiply;
+}
+.home_main_container{
+    position: relative;
+}
+
+.news_process{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    min-width: fit-content;
+}
+.news_process img{
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+.discover_recent_news,
+.know_all_process{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    background-color: var(--div-bg-color);
+    padding: 1.5em 1.8em;
+    border-radius: var(--primary-border);
+    width: 45%;
+    justify-content: space-between;
+}
+.discover_recent_news p,
+.know_all_process p{
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    font-family: var(--secondary-font-family);
+    line-height: normal;
+    font-style: normal;
+    letter-spacing: 0.16px;
+}
+
+/* featured section */
+.featured_container{
+    max-width: 1300px;
+    margin: 4em auto;
+}
+.featured_title_rows{
+    display: flex;
+    justify-content: space-between;
+}
+.explore_more{
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+}
+.featured_title strong{
+    font-size: 2.2rem;
+    font-weight: 600;
+    font-family: var(--primary-font-family);
+    font-style: normal;
+}
+.explore_more p{
+    font-size: 1.5rem;
+    font-family: var(--primary-font-family);
+    font-weight: var(--font-weight-normal);
+    line-height: normal;
+}
+.explore_more img{
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    background-color: #002E5B;
+}
+.footer_container{
+    max-width: 1300px;
+    margin: 0% auto;
+    padding: 4em 0em 2em 0em;
+}
+.footer_row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer_row_title{
+    margin: 2.1em 0em;
+}
+.footer_row_title strong,
+.footer_row_two strong,
+.footer_row_three strong,
+.footer_row_four strong{
+    color: var(--secondary-color);
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    line-height: normal;
+    font-size: 1.5rem;
+}
+.footer_row_title hr,
+.footer_row_two hr,
+.footer_row_three hr,
+.footer_row_four hr{
+    border: 1px solid var(--div-bg-color);
+    width: 50%;
+    margin: .5em 0em;
+}
+.footer_row_title p{
+    padding: 1em 0em;
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-color);
+    font-family: var(--font-weight-normal);
+    line-height: normal;
+    font-size: 1rem;
+}
+.jobs_service ul li a,
+.footer_row_three ul li a,
+.jobs_setup ul li a,
+.copyrights_footer p{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font-family);
+    font-size: 1rem;
+    font-weight: var(--font-weight-normal);
+    line-height: 1.8rem;
+}
+.jobs_service ul li,
+.footer_row_three ul li,
+.jobs_setup ul li{
+    margin: .5em 0em;
+}
+.copyrights_footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0em;
+}
+
+/* featured jobs data */
+
+.display_featured_jobs{
+    margin: 2em 0em;
+}
+.jobs_cols{
+    display: grid;
+    row-gap: 1em;
+    border-radius: 20px;
+    border: 0.5px solid #EBF1FA;
+    background: #FAFAFA;
+    box-shadow: 8px 8px 16px 4px rgba(137, 143, 150, 0.04);
+}
+.job_icon img{
+  width: 100%;
+}
+.job_description_content{
+    padding: 1em;
+    display: grid;
+    row-gap: 1em;
+}
+.job_title p{
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.orgnization p,
+.job_type p{
+    font-weight: 400;
+    font-family: var(--primary-font-family);
+    color: #5E6368;
+    font-size: 1.5rem;
+}
+.jobs_rows{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.apply_now{
+    border-radius: 5px;
+    background: #04ADE6;
+    padding: 1em;
+    text-align: center;
+}
+.apply_now a{
+    color: #FAFAFA;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+}
+.job_type {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+}
+
+
+/* workspace css */
+.work_space{
+    background-image: url('../images/workplace.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.workspace_container{
+    max-width: 1300px;
+    margin: 0% auto;
+    padding: 6em 0em;
+    position: relative;
+}
+.workspace_cols {
+    display: grid;
+    row-gap: 2em;
+    justify-content: center;
+    margin: 4em 0em;
+}
+.workspace_cols .workspace_title h2{
+    color: #FAFAFA;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+.join_us {
+    border-radius: 5px;
+    background: #04ADE6;
+    text-align: center;
+    padding: 1em 1em;
+    width: 40%;
+    margin: 0% auto;
+}
+.join_us a{
+ color: #FAFAFA;
+text-align: center;
+font-family: Open Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+text-decoration: none;
+}

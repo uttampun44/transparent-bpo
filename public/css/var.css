@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff') format('woff');
+}
+
+:root{
+    --primary-color : #1E1E1E;
+    --secondary-color : #FAFAFA;
+    --font-weight-normal: 400;
+    --font-line-height: normal;
+    --primary-font-family: 'Roboto';
+    --secondary-font-family: 'Open Sans', sans-serif;
+    --font-size: 16px;
+    --div-bg-color:#FFDE7F;
+    --primary-border: 5px;
+    --line-height: normal;
+    --font-style: normal;
+}
