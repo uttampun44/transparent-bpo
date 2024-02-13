@@ -3,14 +3,18 @@
         <div class="login-row">
             <div class="login-image">
                 <img src="{{asset('images/loginimage.jpg')}}" alt="login" />
+                <div class="image">
+
+                </div>
             </div>
 
             <x-auth-session-status class="mb-4" :status="session('status')" />
 
-            <div class="login-form">
+            <div class="login-form grid">
 
-                <div class="back-btn">
-                   <a href="{{route('home')}}" aria-label="home">Home</a>
+                <div class="back-btn flex gap-x-4">
+                    <a href="{{route('home')}}" aria-label="home" class="leading-normal cursor-pointer"> <img src="{{asset('images/Arrow_1.png')}}" alt="arrowimages" class="w-10 h-10 object-contain" /></a>
+                   <a href="{{route('home')}}" aria-label="home" class="leading-normal cursor-pointer">Home</a>
                 </div>
                 <div class="login-logo">
                     <img src="{{asset('images/tb-icon.png')}}" alt="logologin" />
@@ -53,7 +57,7 @@
 
                     <div class="flex items-center justify-end mt-4">
                         @if (Route::has('password.request'))
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                            <a class="no-underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
                         @endif
@@ -63,6 +67,9 @@
                         </x-primary-button>
                     </div>
                 </form>
+                <div class="cant-sign text-center py-6">
+                    <span>Don't have an account yet ? <a class="register-link cursor-pointer" href="{{route('register')}}">Register</a></span>
+                 </div>
             </div>
         </div>
 </x-guest-layout>
