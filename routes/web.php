@@ -30,5 +30,5 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/', function () {
     return view('home.home');
-});
+})->name('home');
 require __DIR__.'/auth.php';
