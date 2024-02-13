@@ -13,7 +13,7 @@
     <div class="header_container">
          <div class="header_rows">
                <div class="header_logo">
-                   <img src="{{ asset('/images/transparent-bpo-logo 1.png')}}" alt="header_image" />
+                 <a href="{{route('home')}}" aria-label="home"><img src="{{ asset('/images/transparent-bpo-logo 1.png')}}" alt="header_image" /></a>
                </div>
                <div class="header_login_findjobs">
                      <div class="header_links">
