@@ -12,11 +12,12 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="">
-                    {{-- <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link> --}}
+                <div class="flex gap-x-4 items-center">
+
                     <input type="search" name="search" placeholder="Search Here" class="rounded-md" />
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
                 </div>
             </div>
 
