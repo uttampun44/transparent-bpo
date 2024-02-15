@@ -12,19 +12,28 @@
         <div class="siderbar-admin">
             <aside>
                 <ul class="grid gap-y-5 mt-8">
-                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl">Dashboard</a></li>
-                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl">Templates</a></li>
-                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl">Applicants</a></li>
-                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl">Jobs</a></li>
-                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl">Interviews</a></li>
-                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl">System</a></li>
+                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/Dashboard.png')}}" alt="dashboard" />Dashboard</a></li>
+                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/templates.png')}}" alt="templates" />Templates</a></li>
+                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/applicants.png')}}" alt="applicants" />Applicants</a></li>
+                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/jobs.png')}}" alt="jobs" />Jobs</a></li>
+                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/interview.png')}}" alt="jobs" />Interviews</a></li>
+                    <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/system.png')}}" alt="system"/>System</a></li>
                 </ul>
             </aside>
         </div>
 
-        <div class="admin-logout grid mt-12">
-             <a href="" class="text-gray-400 leading-normal font-medium text-xl">Admin</a>
-             <a href="" class="text-gray-400 leading-normal font-medium text-xl">Logout</a>
+        <div class="admin-logout grid mt-12 gap-y-8 absolute bottom-[10%] left-[20%]">
+             <a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/admin.png')}}" alt="admin" />Admin</a>
+             {{-- <a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/logout.png')}}" alt="logout" />Logout</a> --}}
+             <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-dropdown-link :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Log Out') }}
+                </x-dropdown-link>
+            </form>
         </div>
 
     </div>
