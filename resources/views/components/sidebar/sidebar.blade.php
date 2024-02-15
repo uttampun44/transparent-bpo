@@ -24,7 +24,7 @@
 
         <div class="admin-logout grid mt-12 gap-y-8 absolute bottom-[10%] left-[20%]">
              <a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/admin.png')}}" alt="admin" />Admin</a>
-             {{-- <a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/logout.png')}}" alt="logout" />Logout</a> --}}
+
              <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
