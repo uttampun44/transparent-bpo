@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-sidebar.sidebar />
-    <div class="py-12">
+    <div class="py-12 bg-blue-100">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class= "overflow-hidden shadow-sm sm:rounded-lg md:px-8 md:py-8 bg-blue-400">
                 <div class="form-container">
