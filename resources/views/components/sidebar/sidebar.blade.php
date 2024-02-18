@@ -1,4 +1,4 @@
-<div class="sidebar absolute bg-blue-950 top-0 h-[100vh]">
+<div class="sidebar fixed bg-blue-950 top-0 h-[100vh]">
     <div class="siderbar-cols px-10 py-8 text-center">
         <div class="siderbar-img flex items-center gap-x-4">
             <img src="{{asset('images/transparent-bpo-logo 1.png')}}" alt="transparentlogo" class="w-40 h-auto object-contain" />
@@ -22,7 +22,7 @@
             </aside>
         </div>
 
-        <div class="admin-logout grid mt-12 gap-y-8 absolute bottom-[10%] left-[20%]">
+        <div class="admin-logout grid mt-12 gap-y-8 ">
              <a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/admin.png')}}" alt="admin" />Admin</a>
 
              <form method="POST" action="{{ route('logout') }}">
