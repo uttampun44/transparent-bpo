@@ -5,7 +5,7 @@
         </div>
         <div class="admin-image my-8 grid gap-y-1 justify-items-center">
             <img src="{{asset('images/admin-profile.png')}}" alt="adminimage" class="w-20 h-20 object-contain rounded-[50%]" />
-            <strong class="text-white font-bold leading-normal text-2xl">John Doe</strong>
+            <strong class="text-white font-bold leading-normal text-2xl">{{ Auth::user()->name }}</strong>
             <span class="text-white font-normal text-lg leading-normal">HR Recruiter</span>
         </div>
 
