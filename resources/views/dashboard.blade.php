@@ -3,7 +3,7 @@
     <x-sidebar.sidebar />
 
     <div class="py-12 bg-blue-100">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-2">
+        <div class="md:ml-[250px]  lg:pl-16 grid grid-cols-2 w-[75%] m-auto">
             <div class= "overflow-hidden sm:rounded-lg md:px-8 md:py-8">
 
                 <div class="dashboard-row col-span-4">
@@ -26,14 +26,14 @@
                   </div>
                 </div>
 
-                <div class="chart">
+                <div class="chart bg-white rounded-md">
                     <canvas id="myChart"></canvas>
                 </div>
 
             </div>
 
             <div class="side-row col-span-1">
-               <div id="calendar"></div>
+               <div id="calendar" class="bg-white rounded-md px-4 py-4"></div>
                <div class="open-position my-4 bg-white rounded-md flex justify-between px-4 py-4">
                     <div class="icon-position">
                         <i class="fas fa-chair text-blue-950 text-5xl"></i>
@@ -92,7 +92,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="bg-white py-3 rounded-lg">
+                            <tr class="bg-white">
                                 <td class="px-2 text-center w-[30%] py-3">John Doe</td>
                                 <td class="px-2 text-center w-[30%] py-3">Recruting Head</td>
                                 <td class="px-2 text-center w-[30%] py-3">Application Received</td>

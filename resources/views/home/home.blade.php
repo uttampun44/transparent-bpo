@@ -46,5 +46,20 @@
                 </div>
             </div>
         </section>
+
+        <section class="job-section">
+
+            <div class="feature-job-container">
+                 <div class="feature-title">
+                     <span>Latest featured jobs</span>
+                 </div>
+
+                 <div class="feature-jobs-row">
+
+                 </div>
+            </div>
+
+        </section>
+
      </main>
 <x-footer.footer />

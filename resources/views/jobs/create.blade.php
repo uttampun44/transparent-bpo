@@ -14,7 +14,7 @@
 
                             <div class="company-name">
                                 <label class="text-black text-2xl font-medium leading-normal" for="companyname">Company Name</label><br>
-                                <input type="text" name="companyname" class="py-2 rounded-md w-[100%] mt-4" />
+                                <input type="text" name="companyname" class="py-2 rounded-md w-[100%] mt-4 text-lg font-medium leading-normal font-sans" />
 
                                 <div class="error my-2">
                                     @error('companyname')
@@ -24,7 +24,7 @@
                             </div>
                             <div class="company-image">
                                  <label class="text-black text-2xl font-medium leading-normal">Company Image</label><br>
-                                 <input type="file" name="companyimage" accept="image/jpeg, image/png, image/webp, image/jpg" class="w-[100%] border-2 py-2 px-2 rounded-md"/>
+                                 <input type="file" name="companyimage" accept="image/jpeg, image/png, image/webp, image/jpg" class="w-[100%] border-2 py-2 px-2 rounded-md text-lg font-medium leading-normal font-sans"/>
 
                                  <div class="error my-2">
                                     @error('companyimage')
@@ -35,7 +35,7 @@
 
                            <div class="job-post-cols">
                             <label for="jobpost" class="text-black text-2xl font-medium leading-normal">Job Post</label><br>
-                            <input type="text" name="jobpost" class="rounded-md w-[100%] mt-4" />
+                            <input type="text" name="jobpost" class="rounded-md w-[100%] mt-4 text-lg font-medium leading-normal font-sans" />
 
                             <div class="error my-2">
                                 @error('jobpost')
@@ -46,7 +46,7 @@
 
                            <div class="job-type">
                               <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobtype">Job Type</label><br>
-                              <select name="jobtype" class="w-[100%] rounded-md mt-4">
+                              <select name="jobtype" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans">
                                  <option>Full Time</option>
                                  <option>Part Time</option>
                                  <option>Contract</option>
@@ -62,7 +62,7 @@
 
                            <div class="career-level">
                                <label class="text-black text-2xl font-medium leading-normal font-sans" for="careerlevel">Career Level</label><br>
-                               <select name="careerlevel" class="w-[100%] rounded-md mt-4">
+                               <select name="careerlevel" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans">
                                    <option>Junior</option>
                                    <option>Associate</option>
                                    <option>Senior</option>
@@ -77,7 +77,7 @@
 
                            <div class="deadline">
                               <label class="text-black text-2xl font-medium leading-normal font-sans" for="deadline">Deadline</label><br>
-                              <input type="date" name="deadline" class="w-[100%] rounded-md mt-4" />
+                              <input type="date" name="deadline" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
                            </div>
                            <div class="job-description col-span-2 ">
                               <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
