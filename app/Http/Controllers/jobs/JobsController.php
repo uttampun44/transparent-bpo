@@ -14,7 +14,8 @@ class JobsController extends Controller
 {
     public function index():View
     {
-        return view('jobs.jobs');
+        $jobs = Job::all();
+        return view('jobs.jobs', ['jobs' => $jobs]);
     }
 
     public function show():View
@@ -40,8 +41,9 @@ class JobsController extends Controller
 
           if($request->hasFile('companyimage')){
 
-              $filename = time() . '.' . $request->file('companyimage')->getClientOriginalExtension();
-              $request->file('companyimage')->storeAs('public/uploads', $filename);
+            $filename = time() . '.' . $request->file('companyimage')->getClientOriginalExtension();
+            $request->file('companyimage')->storeAs('public/uploads', $filename);
+
           }
 
         $jobs = new Job;
@@ -58,11 +60,10 @@ class JobsController extends Controller
 
         return redirect()->route('create.jobs')->with('success', 'Job Created Successfully');
 
-        //  return redirect()->route()->compact('validation');
     }
 
     public function edit(Request $request)
     {
-      return view('jobs.edit');
+        return view('jobs.edit');
     }
 }

@@ -377,3 +377,12 @@ font-weight: 700;
 line-height: 20px;
 text-decoration: none;
 }
+.feature-job-container{
+    max-width: 1024px;
+    margin: 4em auto;
+}
+.feature-title span{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+}
