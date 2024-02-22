@@ -34,7 +34,7 @@
                             <td class="text-center border-2 px-2">{{$item->career_level}}</td>
                             <td class="text-center border-2 px-2">{{$item->job_deadline}}</td>
                             <td class="text-center border-2 px-2">{{$item->job_description}}</td>
-                            <td class="text-center border-2 px-2 py-2"><a href="{{route('edit.jobs')}}" class="bg-blue-700 rounded-md py-2 text-white font-sans leading-normal text-xl font-bold"><i class="fas fa-edit w-[100%]"></i></a></td>
+                            <td class="text-center border-2 px-2 py-2"><a href="{{route('edit.jobs', $item->id)}}" class="bg-blue-700 rounded-md py-2 text-white font-sans leading-normal text-xl font-bold"><i class="fas fa-edit w-[100%]"></i></a></td>
                             <td class="text-center border-2 px-2 py-2">
                                 <form method="POST" action="">
                                       <button class="bg-red-700 rounded-md py-2 w-[100%] text-white font-sans leading-normal text-xl font-bold">Delete</button>
