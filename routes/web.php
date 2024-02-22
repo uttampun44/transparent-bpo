@@ -32,8 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/jobs', [JobsController::class, 'index'])->name('show');
     Route::get('/jobs/create', [JobsController::class, 'show'])->name('show.jobs');
     Route::post('/jobs/create', [JobsController::class, 'store'])->name('create.jobs');
-    Route::get('/jobs/update', [JobsController::class, 'edit'])->name('edit.jobs');
-    // Route::put('/jobs/update')
+    Route::get('/jobs/update/{id}', [JobsController::class, 'edit'])->name('edit.jobs');
+    Route::put('/jobs/update/{id}', [JobsController::class, 'update'])->name('update.jobs');
 });
 
 Route::get('/', function () {
