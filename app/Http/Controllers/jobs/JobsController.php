@@ -71,6 +71,43 @@ class JobsController extends Controller
 
     public function update(Request $request, $id)
     {
+        $validation = $request->validate([
+            'companyname' => 'required',
+            'companyimage' => 'required|image|mimes:png,jpg,jpeg,webp|max:1024',
+            'jobpost' => 'required',
+            'jobtype' => 'required',
+            'careerlevel' => 'required',
+            'deadline' => 'required',
+            'jobdescription' => 'required'
+        ],
+        [
+            'companyimage.max' => 'Image size should be less than 1 Mb',
+        ]);
 
+
+        $jobs = new Job;
+
+        $jobsimage = $jobs->company_image;
+
+        if($jobsimage){
+            $destinationFile = 'public/uploads' . $jobs->company_image;
+
+            if($destinationFile){
+                Storage::delete($destinationFile);
+            }
+        }
+
+    }
+
+    public function destroy(Request $request, $id)
+    {
+        $jobs = Job::find($id);
+
+        if($jobs){
+
+            $jobs->delete();
+
+            return redirect()->route('show');
+        }
     }
 }

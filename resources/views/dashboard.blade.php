@@ -97,8 +97,12 @@
                                 <td class="px-2 text-center w-[30%] py-3">Recruting Head</td>
                                 <td class="px-2 text-center w-[30%] py-3">Application Received</td>
                                 <td class="px-2 text-center w-[30%] py-3">Belize</td>
-                                <td class="px-2 text-center w-[30%] py-3"><i></i></td>
-                                <td class="px-2 text-center w-[30%] py-3"><i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
+                                <td class="px-2 text-center w-[30%] py-3"><i class="fas fa-edit text-lg " style="color: red"></i></td>
+                                <td class="px-2 text-center w-[30%] py-3">
+                                  <form method="POST" action="">
+                                    <button class="bg-red-700 rounded-md py-1 px-3 w-[100%] text-white font-sans leading-normal text-xl font-bold">Delete</button>
+                              </form>
+                                </td>
                             </tr>
                         </tbody>
                       </table>

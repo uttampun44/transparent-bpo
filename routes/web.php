@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/jobs/create', [JobsController::class, 'store'])->name('create.jobs');
     Route::get('/jobs/update/{id}', [JobsController::class, 'edit'])->name('edit.jobs');
     Route::put('/jobs/update/{id}', [JobsController::class, 'update'])->name('update.jobs');
+    Route::delete('/jobs/delete/{id}', [JobsController::class, 'destroy'])->name('delete.jobs');
 });
 
 Route::get('/', function () {
