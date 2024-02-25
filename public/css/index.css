@@ -386,3 +386,46 @@ text-decoration: none;
     font-weight: 700;
     line-height: normal;
 }
+.job_image{
+    width: 100%;
+    height: 12em;
+}
+.job_image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+.feature-jobs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2.5em auto;
+    column-gap: 2em;
+}
+.jobs-cols {
+    min-height: 200px;
+}
+.jobs-cols .title{
+    margin: 1em 0em;
+}
+.worktime{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    margin: 1em 0em;
+}
+.work-location{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+.apply_now{
+    width: 90%;
+    margin: 2em 0em;
+}
+.apply_now button{
+    background-color: #04ADE6;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+}

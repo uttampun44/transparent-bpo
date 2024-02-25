@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jobs\JobsController;
+use App\Http\Controllers\featurejobs\FeatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +35,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/jobs/create', [JobsController::class, 'store'])->name('create.jobs');
     Route::get('/jobs/update/{id}', [JobsController::class, 'edit'])->name('edit.jobs');
     Route::put('/jobs/update/{id}', [JobsController::class, 'update'])->name('update.jobs');
+    Route::delete('/jobs/delete/{id}', [JobsController::class, 'destroy'])->name('delete.jobs');
 });
 
-Route::get('/', function () {
-    return view('home.home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home.home');
+// })->name('home');
+Route::get('/', [FeatureController::class, 'index'])->name('home');
 require __DIR__.'/auth.php';
