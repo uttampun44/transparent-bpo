@@ -62,14 +62,14 @@ class JobsController extends Controller
 
     }
 
-    public function edit(Request $request, $id)
+    public function edit(Request $request, $id):View
     {
         $jobs = Job::find($id);
 
         return view('jobs.edit')->with('jobs', $jobs);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $id):RedirectResponse
     {
         $validation = $request->validate([
             'companyname' => 'required',
@@ -85,17 +85,34 @@ class JobsController extends Controller
         ]);
 
 
-        $jobs = new Job;
+        $jobs = Job::findorFail($id);
 
-        $jobsimage = $jobs->company_image;
+        $filename = $jobs->company_image;
 
-        if($jobsimage){
+        if($request->hasFile('companyimage')){
+
             $destinationFile = 'public/uploads' . $jobs->company_image;
 
             if($destinationFile){
                 Storage::delete($destinationFile);
             }
+
+            $filename = time() . '.' . $request->file('companyimage')->getClientOriginalExtension();
+            $request->file('companyimage')->storeAs('public/uploads', $filename);
+
         }
+
+        $jobs->company_name = $request->input('companyname');
+        $jobs->company_image = $filename;
+        $jobs->job_post = $request->input('jobpost');
+        $jobs->job_type = $request->input('jobtype');
+        $jobs->career_level = $request->input('careerlevel');
+        $jobs->job_deadline = $request->input('deadline');
+        $jobs->job_description = $request->input('jobdescription');
+
+        $jobs->save();
+
+        return redirect()->route('create.jobs')->with('success', 'Update Successfully');
 
     }
 

@@ -55,8 +55,35 @@
                  </div>
 
                  <div class="feature-jobs-row">
+                    @foreach ($homejobs as $item)
 
-                 </div>
+                      @php $jobslimit = 0;  @endphp
+
+                      @if($jobslimit < 6)
+                          <div class="jobs-cols">
+                             <div class="job_image">
+                                 <img src="{{asset('storage/uploads/' .$item->company_image)}}" alt="job-image"/>
+                             </div>
+                                 <div class="title">
+                                      <h2><strong>{{$item->job_post}}</strong></h2>
+                                 </div>
+
+                                 <div class="worktime">
+                                     <img src="{{asset('images/location.png')}}"  alt="worklocation" /><span>{{$item->job_type}}</span>
+                                 </div>
+
+                                 <div class="work-location">
+                                      <span>Company :</span><span>{{$item->company_name}}</span>
+                                 </div>
+                                 <div class="apply_now">
+                                    <form method="post">
+                                         <button>Apply Now</button>
+                                    </form>
+                                 </div>
+                          </div>
+                      @endif
+                      @endforeach
+                  </div>
             </div>
 
         </section>

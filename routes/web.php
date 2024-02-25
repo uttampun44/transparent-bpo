@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jobs\JobsController;
+use App\Http\Controllers\featurejobs\FeatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/jobs/delete/{id}', [JobsController::class, 'destroy'])->name('delete.jobs');
 });
 
-Route::get('/', function () {
-    return view('home.home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('home.home');
+// })->name('home');
+Route::get('/', [FeatureController::class, 'index'])->name('home');
 require __DIR__.'/auth.php';
