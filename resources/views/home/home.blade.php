@@ -77,7 +77,7 @@
                                  </div>
                                  <div class="apply_now">
                                     <form method="post">
-                                         <button>Apply Now</button>
+                                         <button type="submit" style="cursor: pointer">Apply Now</button>
                                     </form>
                                  </div>
                           </div>

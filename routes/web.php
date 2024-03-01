@@ -19,6 +19,9 @@ use App\Http\Controllers\featurejobs\FeatureController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/jobscareer', function(){
+    return view('jobsdescription.jobsdescription');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
