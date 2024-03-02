@@ -16,12 +16,12 @@ use App\Http\Controllers\featurejobs\FeatureController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/jobscareer', function(){
-    return view('jobsdescription.jobsdescription');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [FeatureController::class, 'index'])->name('home');
+Route::get('/jobscareer/{companyname}', [FeatureController::class, 'showJobs'])->name('jobs.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -41,8 +41,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/jobs/delete/{id}', [JobsController::class, 'destroy'])->name('delete.jobs');
 });
 
-// Route::get('/', function () {
-//     return view('home.home');
-// })->name('home');
-Route::get('/', [FeatureController::class, 'index'])->name('home');
 require __DIR__.'/auth.php';

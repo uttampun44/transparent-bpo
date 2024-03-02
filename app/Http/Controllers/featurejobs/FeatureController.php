@@ -13,8 +13,20 @@ class FeatureController extends Controller
     {
         $homeJobs = Job::all();
 
-        // dd($homeJobs->toArray());
 
         return view('home.home')->with('homejobs', $homeJobs);
+    }
+
+    public function showJobs(Request $request, $companyname)
+    {
+        $jobs = Job::where('company_name', $companyname)->firstOrFail();
+
+    //    dd($jobs->toArray());
+
+        return view('jobsdescription.jobsdescription')->with(
+
+                'jobs', $jobs
+
+        );
     }
 }

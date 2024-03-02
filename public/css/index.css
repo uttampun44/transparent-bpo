@@ -429,3 +429,34 @@ text-decoration: none;
     color: #fff;
     font-size: 1.2rem;
 }
+
+
+/* career jobdescription */
+.jobsdescription{
+    max-width: 1300px;
+    margin: 5em auto;
+}
+.company-name-img p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+    line-height: normal;
+    margin: .5em 0em;
+}
+.company-name-img img{
+    margin: 1em 0em;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+.position p{
+    color: steelblue;
+    opacity: .7;
+    font-size: 1rem;
+    font-family: var(--primary-font-family);
+    line-height: normal;
+    margin: .5em 0em;
+}
+.experience{
+    margin: 1em 0em;
+}
