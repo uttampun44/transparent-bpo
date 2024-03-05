@@ -445,7 +445,7 @@ text-decoration: none;
 }
 .company-name-img img{
     margin: 1em 0em;
-    width: 150px;
+    width: 300px;
     height: auto;
     object-fit: contain;
 }
@@ -459,4 +459,17 @@ text-decoration: none;
 }
 .experience{
     margin: 1em 0em;
+}
+.button-apply{
+    margin: 1em 0em;
+}
+.button-apply button{
+    background-color: rgb(221, 78, 78);
+    color: #fff;
+    width: 10%;
+    padding: .8em .4em;
+    border-radius: 10px;
+    outline: #FAFAFA;
+    border: 1px solid #fff;
+    cursor: pointer;
 }

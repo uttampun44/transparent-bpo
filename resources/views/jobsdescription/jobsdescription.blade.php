@@ -23,6 +23,15 @@
                     <strong>Job Type</strong>
                     <p>{{$jobs->job_type}}</p>
                  </div>
+
+                 <div class="job-deadline" style="margin-top: .5em;">
+                      <strong>Apply Before</strong>
+                      <p>{{$jobs->job_deadline}}</p>
+                 </div>
+
+                 <div class="button-apply">
+                      <button>Apply Now</button>
+                 </div>
             </div>
         </div>
     </section>
