@@ -76,7 +76,7 @@
                                       <span>Company :</span><span>{{$item->company_name}}</span>
                                  </div>
                                  <div class="apply_now">
-                                         <a href="{{route('jobs.show', $item->company_name)}}" style="cursor: pointer">Apply Now</a>
+                                         <a href="{{route('jobs.show', $item->job_post_slug)}}" style="cursor: pointer">Apply Now</a>
                                  </div>
                           </div>
                       @endif

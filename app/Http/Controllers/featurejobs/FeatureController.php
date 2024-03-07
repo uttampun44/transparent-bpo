@@ -17,16 +17,12 @@ class FeatureController extends Controller
         return view('home.home')->with('homejobs', $homeJobs);
     }
 
-    public function showJobs(Request $request, $companyname)
+    public function showJobs(Request $request, $slug)
     {
-        $jobs = Job::where('company_name', $companyname)->firstOrFail();
-
-    //    dd($jobs->toArray());
+        $jobs = Job::where('job_post_slug', $slug)->firstOrFail();
 
         return view('jobsdescription.jobsdescription')->with(
-
                 'jobs', $jobs
-
         );
     }
 }
