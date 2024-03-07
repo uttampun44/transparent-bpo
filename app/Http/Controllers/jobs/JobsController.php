@@ -8,6 +8,7 @@ use Illuminate\View\View;
 use App\Models\jobs\Job;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 
 class JobsController extends Controller
@@ -105,6 +106,7 @@ class JobsController extends Controller
         $jobs->company_name = $request->input('companyname');
         $jobs->company_image = $filename;
         $jobs->job_post = $request->input('jobpost');
+        $jobs->job_post_slug = Str::slug($request->input('jobpost'));
         $jobs->job_type = $request->input('jobtype');
         $jobs->career_level = $request->input('careerlevel');
         $jobs->job_deadline = $request->input('deadline');

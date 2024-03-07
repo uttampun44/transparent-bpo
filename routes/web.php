@@ -21,7 +21,7 @@ use App\Http\Controllers\featurejobs\FeatureController;
 // });
 
 Route::get('/', [FeatureController::class, 'index'])->name('home');
-Route::get('/jobscareer/{companyname}', [FeatureController::class, 'showJobs'])->name('jobs.show');
+Route::get('/jobscareer/{slug}', [FeatureController::class, 'showJobs'])->name('jobs.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
