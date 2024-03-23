@@ -13,7 +13,6 @@ class FeatureController extends Controller
     {
         $homeJobs = Job::all();
 
-
         return view('home.home')->with('homejobs', $homeJobs);
     }
 
