@@ -473,3 +473,71 @@ text-decoration: none;
     border: 1px solid #fff;
     cursor: pointer;
 }
+.job-details-row
+{
+    display: flex;
+    column-gap: 8em;
+}
+.job_cols{
+    width: 70%;
+}
+.job-type,
+.job-setup,
+.salary-offer{
+  background-color: #04ADE6;
+  padding: 1em;
+  border-radius: 10px;
+  color: #fff;
+  font-family: var(--primary-font-family);
+}
+
+.job-description,
+.job-responsibilities,
+.job-requirements{
+    margin: 2em 0em;
+}
+.job-description strong,
+.job-responsibilities strong,
+.job-requirements strong{
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+    font-size: 1.5rem;
+}
+.job-description p,
+.job-responsibilities ul,
+.job-requirements ul{
+    margin: 1em 0em;
+    font-family: var(--primary-font-family);
+    font-weight: 500;
+}
+
+.jobs_list{
+    width: 30%;
+
+}
+.job-title-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+}
+.job-layer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.detail-grid{
+    padding: 2.5em;
+    border:  1px solid #eceaea;
+    margin: 2em 0em;
+    border-radius: 10px;
+}
+.location-jobtype{
+    margin: 1em 0em;
+}
+.job-salary{
+    margin: 1em 0em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
