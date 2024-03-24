@@ -27,6 +27,7 @@ class JobsController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validation = $request->validate([
+            'jobcategory' => 'required',
             'companyname' => 'required',
             'companyimage' => 'required|image|mimes:png,jpg,jpeg,webp|max:1024',
             'jobpost' => 'required',
@@ -49,6 +50,7 @@ class JobsController extends Controller
 
         $jobs = new Job;
 
+        $jobs->job_category = $request->input('jobcategory');
         $jobs->company_name = $request->input('companyname');
         $jobs->company_image = $filename;
         $jobs->job_post = $request->input('jobpost');
