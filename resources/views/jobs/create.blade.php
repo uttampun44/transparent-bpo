@@ -14,7 +14,11 @@
                             <select name="jobcategory" class="w-[50%] rounded-md">
                                 <option>Accountant</option>
                             </select>
-                        </div>
+                            <div class="error my-2">
+                                @error('jobcategory')
+                                   <p class="text-red-700 text-xl font-medium leading-none">{{$message}}</p>
+                                @enderror
+                            </div>                        </div>
                         <div class="job-grid grid grid-cols-2 gap-x-5 gap-y-6 max-md:flex max-md:flex-col max-md:px-4">
 
                             <div class="company-name">

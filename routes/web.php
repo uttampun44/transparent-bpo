@@ -25,6 +25,10 @@ Route::get('/', [FeatureController::class, 'index'])->name('home');
 Route::get('/jobscareer/{slug}', [FeatureController::class, 'showJobs'])->name('jobs.show');
 Route::get('/category', [CategoryController::class, 'index'])->name('category');
 Route::get('/category/create', [CategoryController::class, 'show'])->name('category.show');
+Route::post('/category/create', [CategoryController::class, 'store'])->name('category.create');
+Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::put('/category/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
+Route::delete('/category/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

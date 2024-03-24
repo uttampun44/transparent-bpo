@@ -4,7 +4,7 @@
         <div class="ml-[200px]">
             <div class= "overflow-hidden shadow-sm sm:rounded-lg md:px-8 md:py-8 bg-white">
                 <div class="form-container">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data" action="{{route('category.create')}}">
                         @csrf
                         <div class="add-category">
                             <label for="add_category" class="text-black text-2xl font-medium leading-normal font-sans">Add Job Category</label>
@@ -12,8 +12,14 @@
                         </div>
 
                         <div class="button-submit-cancel my-3 flex gap-x-4">
-                            <button type="submit" class="bg-green-500 px-6 py-2 rounded-md text-white font-bold text-lg">Submit</button> <a href="" aria-label="cancel" class="bg-red-500 px-6 py-2 rounded-md text-white text-lg font-bold">Cancel</a>
+                            <button type="submit" class="bg-green-500 px-6 py-2 rounded-md text-white font-bold text-lg">Submit</button> <a href="{{route('category')}}" aria-label="cancel" class="bg-red-500 px-6 py-2 rounded-md text-white text-lg font-bold">Cancel</a>
                         </div>
+
+                        @if(session('Success'))
+                            <div class="submit-success w-[25%] text-center bg-green-500 px-6 py-2 rounded-md text-white font-bold text-lg">
+                                <span>{{session('Success')}}</span>
+                            </div>
+                        @endif
                     </form>
                 </div>
             </div>
