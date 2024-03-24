@@ -10,6 +10,11 @@
                         <div class="job-title my-4 max-md:text-center">
                             <label class="text-black text-2xl font-medium leading-normal font-sans" for="postjobs">Post Jobs :</label>
                         </div>
+                        <div class="job-category my-4 pr-4">
+                            <select name="jobcategory" class="w-[50%] rounded-md">
+                                <option>Accountant</option>
+                            </select>
+                        </div>
                         <div class="job-grid grid grid-cols-2 gap-x-5 gap-y-6 max-md:flex max-md:flex-col max-md:px-4">
 
                             <div class="company-name">
@@ -79,6 +84,26 @@
                               <label class="text-black text-2xl font-medium leading-normal font-sans" for="deadline">Deadline</label><br>
                               <input type="date" name="deadline" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
                            </div>
+                           <div class="location">
+                            <label for="location" class="text-black text-2xl font-medium leading-normal font-sans">Location</label><br>
+                            <input type="text" name="location" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
+                          </div>
+
+                          <div class="requirement">
+                            <label for="requirement" class="text-black text-2xl font-medium leading-normal font-sans">Requirement:</label><br>
+                            <input type="text" name="requirement" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
+                          </div>
+
+                          <div class="salary">
+                            <label for="salary" class="text-black text-2xl font-medium leading-normal font-sans">Salary:</label><br>
+                            <input type="text" name="salary" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
+                          </div>
+
+                          <div class="responsibilities">
+                            <label for="responsibilities" class="text-black text-2xl font-medium leading-normal font-sans">Responsibilities:</label><br>
+                            <input type="text" name="responsibilities" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
+                          </div>
+
                            <div class="job-description col-span-2 ">
                               <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
                               <textarea name="jobdescription" class="w-[100%] h-[200px] mt-4 rounded-md"></textarea>
@@ -88,7 +113,9 @@
                                    <p class="text-red-700 text-xl font-medium leading-none">{{$message}}</p>
                                 @enderror
                             </div>
-                            </div>
+                         </div>
+
+
                         </div>
 
                         <div class="submit my-4 max-md:px-4">
