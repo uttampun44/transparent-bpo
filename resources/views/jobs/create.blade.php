@@ -12,7 +12,9 @@
                         </div>
                         <div class="job-category my-4 pr-4">
                             <select name="jobcategory" class="w-[50%] rounded-md">
-                                <option>Accountant</option>
+                                @foreach ($category as $item)
+                                     <option value="{{$item->id}}">{{$item->job_categories}}</option>
+                                @endforeach
                             </select>
                             <div class="error my-2">
                                 @error('jobcategory')
