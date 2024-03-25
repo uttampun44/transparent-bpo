@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\jobs;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category\Category;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\jobs\Job;
@@ -16,12 +17,15 @@ class JobsController extends Controller
     public function index():View
     {
         $jobs = Job::all();
-        return view('jobs.jobs', ['jobs' => $jobs]);
+
+        return view('jobs.jobs')->with('jobs', $jobs);
     }
 
     public function show():View
     {
-        return view('jobs.create');
+        $category = Category::all();
+
+        return view('jobs.create')->with('category', $category);
     }
 
     public function store(Request $request): RedirectResponse
@@ -50,14 +54,24 @@ class JobsController extends Controller
 
         $jobs = new Job;
 
-        $jobs->job_category = $request->input('jobcategory');
+        $job_id = $validation['jobcategory'];
+
+        $cat = Category::find($job_id);
+
         $jobs->company_name = $request->input('companyname');
+        $jobs->job_category = $cat->job_categories;
         $jobs->company_image = $filename;
         $jobs->job_post = $request->input('jobpost');
+        $jobs->job_responsibilities = $request->input('responsibilities');
+        $jobs->requirement = $request->input('requirement');
+        $jobs->salary = $request->input('salary');
+        $jobs->location = $request->input('location');
+        $jobs->job_post_slug = Str::slug($request->input('jobpost'));
         $jobs->job_type = $request->input('jobtype');
         $jobs->career_level = $request->input('careerlevel');
         $jobs->job_deadline = $request->input('deadline');
         $jobs->job_description = $request->input('jobdescription');
+        $jobs->job_category_id =  $cat->id;
 
         $jobs->save();
 
@@ -68,15 +82,21 @@ class JobsController extends Controller
     public function edit(Request $request, $id):View
     {
         $jobs = Job::find($id);
+        $cat = Category::all();
 
-        return view('jobs.edit')->with('jobs', $jobs);
+        return view('jobs.edit')->with(
+            [
+             'jobs' => $jobs,
+             'category' => $cat
+            ]
+        );
     }
 
     public function update(Request $request, $id):RedirectResponse
     {
         $validation = $request->validate([
             'companyname' => 'required',
-            'companyimage' => 'required|image|mimes:png,jpg,jpeg,webp|max:1024',
+            'jobcategory' => 'required',
             'jobpost' => 'required',
             'jobtype' => 'required',
             'careerlevel' => 'required',
@@ -105,14 +125,24 @@ class JobsController extends Controller
 
         }
 
+        $job_id = $validation['jobcategory'];
+
+        $cat = Category::find($job_id);
+
         $jobs->company_name = $request->input('companyname');
+        $jobs->job_category = $cat->job_categories;
         $jobs->company_image = $filename;
         $jobs->job_post = $request->input('jobpost');
+        $jobs->job_responsibilities = $request->input('responsibilities');
+        $jobs->requirement = $request->input('requirement');
+        $jobs->salary = $request->input('salary');
+        $jobs->location = $request->input('location');
         $jobs->job_post_slug = Str::slug($request->input('jobpost'));
         $jobs->job_type = $request->input('jobtype');
         $jobs->career_level = $request->input('careerlevel');
         $jobs->job_deadline = $request->input('deadline');
         $jobs->job_description = $request->input('jobdescription');
+        $jobs->job_category_id =  $cat->id;
 
         $jobs->save();
 
