@@ -6,3 +6,5 @@
 🔹 User-Centric Experience: Users can explore detailed job listings, submit applications, and access their personalized profiles. 🌟
 
 🔹 Data Security: Rest assured, your information is safely stored and managed within our MySQL database. 🔐
+
+🔹 Application Tracking: Admins can easily track applicants for each job listing, ensuring seamless management and efficient recruitment. 📋💼
