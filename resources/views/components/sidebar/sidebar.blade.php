@@ -16,7 +16,7 @@
                     <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/templates.png')}}" alt="templates" />Templates</a></li>
                     <li><a href="{{route('category')}}" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/templates.png')}}" alt="jobtype" />Job Type</a></li>
                     <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/applicants.png')}}" alt="applicants" />Applicants</a></li>
-                    <li><a href="{{route('show')}}" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/jobs.png')}}" alt="jobs" />Jobs</a></li>
+                    <li><a href="{{route('jobs')}}" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/jobs.png')}}" alt="jobs" />Jobs</a></li>
                     <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/interview.png')}}" alt="jobs" />Interviews</a></li>
                     <li><a href="" class="text-gray-400 leading-normal font-medium text-xl flex gap-x-4 items-center"><img src="{{asset('images/system.png')}}" alt="system"/>System</a></li>
                 </ul>
