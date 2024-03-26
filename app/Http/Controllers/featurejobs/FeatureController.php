@@ -20,8 +20,17 @@ class FeatureController extends Controller
     {
         $jobs = Job::where('job_post_slug', $slug)->firstOrFail();
 
+
+
+        $related_jobs = Job::where('job_category', $jobs->job_category)
+                        ->limit(6)
+                        ->get();
+
         return view('jobsdescription.jobsdescription')->with(
-                'jobs', $jobs
+            [
+            'jobs' => $jobs,
+            'related_jobs' => $related_jobs
+            ]
         );
     }
 }

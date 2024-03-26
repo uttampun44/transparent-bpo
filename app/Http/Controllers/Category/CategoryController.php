@@ -43,6 +43,7 @@ class CategoryController extends Controller
         $job = Category::find($id);
 
         $job->job_categories = $request->input('add_category');
+
         $job->save();
 
         return back()->with('Success', 'Data Update Successfully');

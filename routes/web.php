@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     /** jobs routes **/
-    Route::get('/jobs', [JobsController::class, 'index'])->name('show');
+    Route::get('/jobs', [JobsController::class, 'index'])->name('jobs');
     Route::get('/jobs/create', [JobsController::class, 'show'])->name('show.jobs');
     Route::post('/jobs/create', [JobsController::class, 'store'])->name('create.jobs');
     Route::get('/jobs/update/{id}', [JobsController::class, 'edit'])->name('edit.jobs');

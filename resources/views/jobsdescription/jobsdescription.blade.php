@@ -49,37 +49,46 @@
 
                   </div>
 
+
                   <div class="jobs_list">
                          <h2>Related Jobs</h2>
-
+                         <aside>
                          <div class="job-side-column">
                                  <div class="details-box">
+                                    @foreach ($related_jobs as $item)
+
                                        <div class="detail-grid">
+
                                         <div class="job-layer">
                                             <div class="jobs_titles">
                                                 <strong>Email Support</strong>
                                                   <div class="location-jobtype">
-                                                       <span>{{$jobs->job_type}}<span>
-                                                            <span>{{$jobs->location}}<span>
+                                                       <span>{{$item->job_post}}<span><br>
+                                                            <span>{{$item->location}}<span>
                                                   </div>
                                               </div>
                                             <div class="icon">
                                                  <img src="{{asset('images/Layer_1.png')}}" alt="" />
                                             </div>
-                                        </div>
+                                         </div>
 
                                             <div class="side-col-description">
-                                                <p>{{$jobs->job_description}}</p>
+                                                <p>{{$item->job_description}}</p>
                                             </div>
 
                                             <div class="job-salary">
-                                                <span>${{$jobs->salary}}/month</span>
+                                                <span>${{$item->salary}}/month</span>
                                                 <span>6 Days</span>
                                             </div>
                                        </div>
+
+
                                  </div>
+                                 @endforeach
                          </div>
+                        </aside>
                   </div>
+
           </div>
 
     </section>

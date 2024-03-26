@@ -94,21 +94,14 @@ class JobsController extends Controller
 
     public function update(Request $request, $id):RedirectResponse
     {
+
         $validation = $request->validate([
-            'companyname' => 'required',
             'jobcategory' => 'required',
-            'jobpost' => 'required',
-            'jobtype' => 'required',
-            'careerlevel' => 'required',
-            'deadline' => 'required',
-            'jobdescription' => 'required'
         ],
-        [
-            'companyimage.max' => 'Image size should be less than 1 Mb',
-        ]);
+       );
 
+        $jobs = Job::find($id);
 
-        $jobs = Job::findorFail($id);
 
         $filename = $jobs->company_image;
 
@@ -125,12 +118,17 @@ class JobsController extends Controller
 
         }
 
+
         $job_id = $validation['jobcategory'];
 
-        $cat = Category::find($job_id);
+
+        $category = Category::find($job_id);
+
+
+
 
         $jobs->company_name = $request->input('companyname');
-        $jobs->job_category = $cat->job_categories;
+        $jobs->job_category = $category->job_categories;
         $jobs->company_image = $filename;
         $jobs->job_post = $request->input('jobpost');
         $jobs->job_responsibilities = $request->input('responsibilities');
@@ -142,11 +140,11 @@ class JobsController extends Controller
         $jobs->career_level = $request->input('careerlevel');
         $jobs->job_deadline = $request->input('deadline');
         $jobs->job_description = $request->input('jobdescription');
-        $jobs->job_category_id =  $cat->id;
+        $jobs->job_category_id =  $category->id;
 
         $jobs->save();
 
-        return redirect()->route('create.jobs')->with('success', 'Update Successfully');
+        return redirect()->route('jobs')->with('success', 'Update Successfully');
 
     }
 
