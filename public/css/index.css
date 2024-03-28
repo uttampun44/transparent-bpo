@@ -1,4 +1,13 @@
 @import url('./var.css');
+
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: normal;
+    font-family: var(--secondary-font-family);
+  }
+
+
 header{
     padding: 1.5em 0em;
     position: relative;
@@ -496,6 +505,12 @@ text-decoration: none;
 .job-requirements{
     margin: 2em 0em;
 }
+.feature-jobs-row .jobs-cols .title span{
+    color: #5E6368;
+    font-family: var(--secondary-font-family);
+    font-size: 1em;
+    font-weight: 400;
+}
 .job-description strong,
 .job-responsibilities strong,
 .job-requirements strong{
@@ -545,3 +560,213 @@ text-decoration: none;
     display: grid;
 }
 
+@media screen and (max-width: 767px){
+    .header_rows{
+        flex-direction: column;
+        padding: 1em;
+    }
+    .hero_section_rows{
+        padding: 1em;
+    }
+    .footer_row{
+        display: grid;
+        justify-content: center;
+    }
+    .feature-jobs-row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .jobs-cols{
+        justify-items: center;
+    }
+    .news_process{
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+        row-gap: 1em;
+    }
+    .discover_recent_news,
+    .know_all_process{
+        width: 100%;
+    }
+    .feature-title{
+        text-align: center;
+    }
+    .form_container_hero{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .header_rows{
+        padding: 1em;
+    }
+    .footer_row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .footer_container{
+        padding: 1em;
+    }
+    .feature-job-container{
+        padding: 1em;
+    }
+    .home_main_container{
+        padding: 1em;
+    }
+}
+
+/* join us */
+.join-us-container{
+    max-width: 1300px;
+    margin: 0em auto;
+    padding: 4em 0em;
+    position: relative;
+}
+#join-us {
+    background-image: url('../images/joinus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.join-after::after {
+    content: "";
+    background-image: url('../images/Rectangle_22.png');
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.title-we-are{
+    text-align: center;
+}
+.title-we-are h2{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+}
+.join-us-button{
+    background-color: #04ADE6;
+    margin: 4em auto;
+    width: 20%;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+}
+.join-us-button a{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* find your team  */
+
+.find-your-team{
+    max-width: 1300px;
+    margin: 4em auto;
+}
+.your-team-view{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.view-all-team{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+.view-all-team span{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    font-family: var(--secondary-font-family);
+}
+.view-all-team img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.team-detail-cols{
+  display: flex;
+  column-gap: 3em;
+  margin: 3em 0em;
+}
+.team-detail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+    width: 70%;
+    padding: 0em 2.5em;
+}
+.img-team{
+    width: 30%;
+}
+.img-team img{
+   width: 100%;
+}
+.view-all-team span{
+    color: #000;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    line-height: normal;
+}
+.view-all-team img{
+    position: relative;
+    top: 4px;
+}
+.team-detail-cols h3{
+    color: #04ADE6;
+    font-family: var(--secondary-font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.team-detail-cols p{
+    color: #5E6368;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    line-height: normal;
+    margin: .5em 0em;
+}
+#find-team{
+    border-bottom: 1px solid #E7E6E6;
+}
+
+/* our location */
+.our-location{
+    max-width: 1300px;
+    margin: 4em auto;
+}
+.our-location-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.view-all-location{
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+.view-all-location span{
+    color: #000;
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    line-height: normal;
+}
+.view-all-location img{
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    position: relative;
+    top: 4px;
+}
+.grid-location{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3em 0em 5em 0em;
+}
+.location{
+    cursor: pointer;
+}
