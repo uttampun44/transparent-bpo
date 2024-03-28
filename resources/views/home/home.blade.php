@@ -65,7 +65,8 @@
                                  <img src="{{asset('storage/uploads/' .$item->company_image)}}" alt="job-image"/>
                              </div>
                                  <div class="title">
-                                      <h2><strong>{{$item->job_post}}</strong></h2>
+                                      <h2>{{$item->job_post}}</h2>
+                                      <span>{{$item->job_category}}</span>
                                  </div>
 
                                  <div class="worktime">
@@ -84,6 +85,91 @@
                   </div>
             </div>
 
+        </section>
+
+        <!-- join us !-->
+        <section id="join-us">
+            <div class="join-after">
+
+            </div>
+            <div class="join-us-container">
+                   <div class="title-we-are">
+                        <h2>We're more than just<br> a workplace. We're a family.</h2>
+                   </div>
+                   <div class="join-us-button">
+                      <a href="{{route('register')}}">Join Us</a>
+                   </div>
+            </div>
+        </section>
+
+        <!-- find your team !-->
+        <section id="find-team">
+            <div class="find-your-team">
+                  <div class="your-team-view">
+                        <div class="your-team">
+                              <h2>Find Your Team</h2>
+                        </div>
+                        <div class="view-all-team">
+                            <span>View all teams </span><span><img src="{{asset('images/Arrow_1.png')}}" /></span>
+                        </div>
+                  </div>
+
+                  <div class="team-detail-cols">
+                          <div class="img-team">
+                               <img src="{{asset('images/home_team.png')}}" />
+                          </div>
+
+                          <div class="team-detail">
+                                 <div class="title-engineering">
+                                      <h3>Engeering & Tech</h3>
+                                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, aliquid sapiente vel possimus quam reprehenderit dolorem cumque ratione in eos.</p>
+                                 </div>
+                                 <div class="people">
+                                    <h3>People</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, aliquid sapiente vel possimus quam reprehenderit dolorem cumque ratione in eos.</p>
+                                 </div>
+
+                                 <div class="sale-marketing">
+                                    <h3>Sale, Service & Support</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, aliquid sapiente vel possimus quam reprehenderit dolorem cumque ratione in eos.</p>
+                                 </div>
+                                 <div class="marketing">
+                                    <h3>Marketing</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, aliquid sapiente vel possimus quam reprehenderit dolorem cumque ratione in eos.</p>
+                                 </div>
+                          </div>
+                  </div>
+            </div>
+        </section>
+
+        <!-- our location !-->
+
+        <section>
+            <div class="our-location">
+                <div class="our-location-row">
+                       <div class="title-location">
+                             <h2>Our Locations</h2>
+                       </div>
+                       <div class="view-all-location">
+                        <span>View all teams </span><span><img src="{{asset('images/Arrow_1.png')}}" /></span>
+                       </div>
+                </div>
+
+                <div class="grid-location">
+                       <div class="location">
+                          <img src="{{asset('images/location_one.png')}}" />
+                       </div>
+                       <div class="location">
+                          <img src="{{asset('images/location_two.png')}}" />
+                       </div>
+                       <div class="location">
+                           <img src="{{asset('images/location_three.png')}}" />
+                       </div>
+                       <div class="location">
+                            <img src="{{asset('images/location_four.png')}}" />
+                       </div>
+                </div>
+            </div>
         </section>
 
      </main>

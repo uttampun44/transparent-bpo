@@ -11,7 +11,7 @@ class FeatureController extends Controller
 {
     public function index():View
     {
-        $homeJobs = Job::all();
+        $homeJobs = Job::latest()->limit(6)->get();
 
         return view('home.home')->with('homejobs', $homeJobs);
     }
