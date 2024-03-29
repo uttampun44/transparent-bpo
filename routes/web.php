@@ -30,6 +30,8 @@ Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('ca
 Route::put('/category/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
 Route::delete('/category/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
 
+Route::redirect('/', '/dashboard');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
