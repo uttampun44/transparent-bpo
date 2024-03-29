@@ -39,8 +39,8 @@
                         <i class="fas fa-chair text-blue-950 text-5xl"></i>
                     </div>
                     <div class="position-text">
-                        <span>Current Position</span><br>
-                        <span class="text-bold text-2xl leading-normal">500</span>
+                        <span>Current Jobs</span><br>
+                        <span class="text-bold text-2xl leading-normal">{{$jobs}}</span>
                     </div>
                     <div class="arrow-next">
                         <i class="fa fa-arrow-right"></i>
