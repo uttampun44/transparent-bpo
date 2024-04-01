@@ -67,16 +67,11 @@
 
                            <div class="deadline">
                               <label class="text-black text-2xl font-medium leading-normal font-sans" for="deadline">Deadline</label><br>
-                              <input type="date" name="deadline" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
+                              <input type="date" name="deadline" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" value="{{$jobs->job_deadline}}"/>
                            </div>
                            <div class="location">
                             <label for="location" class="text-black text-2xl font-medium leading-normal font-sans">Location</label><br>
                             <input type="text" name="location" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" value="{{$jobs->location}}" />
-                          </div>
-
-                          <div class="requirement">
-                            <label for="requirement" class="text-black text-2xl font-medium leading-normal font-sans">Requirement:</label><br>
-                            <input type="text" name="requirement" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" value="{{$jobs->requirement}}" />
                           </div>
 
                           <div class="salary">
@@ -84,20 +79,42 @@
                             <input type="text" name="salary" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" value="{{$jobs->salary}}" />
                           </div>
 
-                          <div class="responsibilities">
-                            <label for="responsibilities" class="text-black text-2xl font-medium leading-normal font-sans">Responsibilities:</label><br>
-                            <input type="text" name="responsibilities" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" value="{{$jobs->job_responsibilities}}" />
-                          </div>
-
-                           <div class="job-description col-span-2 ">
-                              <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
-                              <textarea name="jobdescription" class="w-[100%] h-[200px] mt-4 rounded-md">{{$jobs->job_description}}</textarea>
-
-
-                         </div>
-
 
                         </div>
+
+                          <div class="my-6">
+                            <label for="requirement" class="text-black text-2xl font-medium leading-normal font-sans">Requirement:</label><br>
+                            <div class="requirement">
+                                <textarea  type="text" contenteditable="true" name="requirement" class="w-[100%] summertexteditor rounded-md mt-4 text-lg font-medium leading-normal font-sans">{{$jobs->requirement}}</textarea>
+                              </div>
+                            </div>
+
+                              <div class="responsibilites my-6" >
+                              <label for="responsibilities" class="text-black  text-2xl font-medium leading-normal font-sans">Responsibilities:</label><br>
+                              <div class="requirement" >
+
+                                <textarea type="text" contenteditable="true" name="responsibilities" class="w-[100%] summertexteditor rounded-md mt-4 text-lg font-medium leading-normal font-sans">{{$jobs->job_responsibilities}}</textarea>
+                              </div>
+                              </div>
+
+                              <div class="responsibilities my-6">
+                                    <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
+
+                                    <div class="requirement">
+                                        <textarea name="jobdescription" class="w-[100%] summertexteditor h-[200px] mt-4 rounded-md">{{$jobs->job_description}}</textarea>
+
+                                    </div>
+
+                                    <div class="error my-2">
+                                      @error('jobdescription')
+                                         <p class="text-red-700 text-xl font-medium leading-none">{{$message}}</p>
+                                      @enderror
+                                  </div>
+                              </div>
+
+
+
+
 
                         <div class="submit my-4 max-md:px-4">
                             <button type="submit" class="bg-green-700 text-2xl font-bold leading-normal text-white px-4 py-1 rounded-md">Update</button>
@@ -114,3 +131,12 @@
         </div>
     </div>
 </x-app-layout>
+
+
+<script>
+$(document).ready(function() {
+
+
+  $('.summertexteditor').summernote();
+});
+</script>

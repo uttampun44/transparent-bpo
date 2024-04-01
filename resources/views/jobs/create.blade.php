@@ -95,34 +95,48 @@
                             <input type="text" name="location" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
                           </div>
 
-                          <div class="requirement">
-                            <label for="requirement" class="text-black text-2xl font-medium leading-normal font-sans">Requirement:</label><br>
-                            <input type="text" name="requirement" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
-                          </div>
 
                           <div class="salary">
                             <label for="salary" class="text-black text-2xl font-medium leading-normal font-sans">Salary:</label><br>
                             <input type="text" name="salary" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
                           </div>
 
-                          <div class="responsibilities">
-                            <label for="responsibilities" class="text-black text-2xl font-medium leading-normal font-sans">Responsibilities:</label><br>
-                            <input type="text" name="responsibilities" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans" />
-                          </div>
-
-                           <div class="job-description col-span-2 ">
-                              <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
-                              <textarea name="jobdescription" class="w-[100%] h-[200px] mt-4 rounded-md"></textarea>
-
-                              <div class="error my-2">
-                                @error('jobdescription')
-                                   <p class="text-red-700 text-xl font-medium leading-none">{{$message}}</p>
-                                @enderror
-                            </div>
                          </div>
 
 
+                         <div class="my-6">
+                            <label for="requirement" class="text-black text-2xl font-medium leading-normal font-sans">Requirement:</label><br>
+                            <div class="">
+                                <textarea class="editor" type="text" name="requirement" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans"></textarea>
+                              </div>
+                            </div>
+                           </div>
+
+                              <div class="responsibilites my-6" >
+                              <label for="responsibilities" class="requirement text-black text-2xl font-medium leading-normal font-sans">Responsibilities:</label><br>
+                              <div class="requirement" >
+
+                                <textarea type="text" class="editor" name="responsibilities" class="w-[100%] rounded-md mt-4 text-lg font-medium leading-normal font-sans"></textarea>
+                              </div>
+                              </div>
+
+                              <div class="responsibilities my-6">
+                                    <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
+
+                                    <div>
+                                        <textarea class="editor" name="jobdescription" class="w-[100%] h-[200px] mt-4 rounded-md"></textarea>
+
+                                    </div>
+
+                                    <div class="error my-2">
+                                      @error('jobdescription')
+                                         <p class="text-red-700 text-xl font-medium leading-none">{{$message}}</p>
+                                      @enderror
+                                  </div>
+                              </div>
                         </div>
+
+
 
                         <div class="submit my-4 max-md:px-4">
                             <button type="submit" class="bg-green-700 text-2xl font-bold leading-normal text-white px-4 py-1 rounded-md">Submit</button>
@@ -139,3 +153,9 @@
         </div>
     </div>
 </x-app-layout>
+
+<script>
+$(document).ready(function() {
+  $('.editor').summernote();
+});
+  </script>
