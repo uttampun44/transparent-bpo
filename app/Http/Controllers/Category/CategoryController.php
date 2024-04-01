@@ -23,9 +23,10 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-           $jobs_models = new Category();
+           $jobs_models = Category::create([
+              'job_categories' => $request->input('add_category')
+           ]);
 
-           $jobs_models->job_categories = $request->input('add_category');
            $jobs_models->save();
 
            return back()->with('Success', 'Data Inserted Successfully' );

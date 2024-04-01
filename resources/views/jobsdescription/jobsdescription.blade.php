@@ -26,20 +26,49 @@
 
                            <div class="job-description">
                               <strong>Job Description</strong>
-                               <p>{{$jobs->job_description}}</p>
+
+                              @php
+
+
+                                 $description = $jobs->job_description;
+
+                        $description = preg_replace('#<ol(.*?)>(.*?)</ol>#is', '$2', $description);
+                            @endphp
+
+                               <ul class="list-disc">
+                                <li>
+                                    {!! $description !!}
+                                </li>
+                               </ul>
                             </div>
 
                             <div class="job-responsibilities">
                               <strong>Responsibilities</strong>
-                               <ul>
-                                   <li>{{$jobs->job_description}}</li>
+
+                              @php
+
+
+                              $description = $jobs->job_responsibilities;
+
+                     $responsibilities = preg_replace('#<ol(.*?)>(.*?)</ol>#is', '$2', $description);
+                         @endphp
+
+                               <ul class="list-disc">
+                                   <li>{!! $responsibilities !!}</li>
                                </ul>
                             </div>
 
                             <div class="job-requirements">
                               <strong>Requirements</strong>
-                               <ul>
-                                   <li>{{$jobs->job_description}}</li>
+
+                              @php
+
+                              $description = $jobs->requirement;
+
+                     $requirement = preg_replace('#<ol(.*?)>(.*?)</ol>#is', '$2', $description);
+                         @endphp
+                               <ul class="list-disc">
+                                   <li>{!!  $requirement !!}</li>
                                </ul>
                             </div>
 
@@ -73,7 +102,11 @@
                                          </div>
 
                                             <div class="side-col-description">
-                                                <p>{{$item->job_description}}</p>
+                                                <ul>
+                                                    <li>
+                                                        {!! $item->job_description !!}
+                                                    </li>
+                                                </ul>
                                             </div>
 
                                             <div class="job-salary">
