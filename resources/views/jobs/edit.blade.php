@@ -85,7 +85,7 @@
                           <div class="my-6">
                             <label for="requirement" class="text-black text-2xl font-medium leading-normal font-sans">Requirement:</label><br>
                             <div class="requirement">
-                                <textarea  type="text" contenteditable="true" name="requirement" class="w-[100%] summertexteditor rounded-md mt-4 text-lg font-medium leading-normal font-sans">{{$jobs->requirement}}</textarea>
+                                <textarea  type="text" contenteditable="true" name="requirement" class="w-[100%] editeditor rounded-md mt-4 text-lg font-medium leading-normal font-sans">{{$jobs->requirement}}</textarea>
                               </div>
                             </div>
 
@@ -93,7 +93,7 @@
                               <label for="responsibilities" class="text-black  text-2xl font-medium leading-normal font-sans">Responsibilities:</label><br>
                               <div class="requirement" >
 
-                                <textarea type="text" contenteditable="true" name="responsibilities" class="w-[100%] summertexteditor rounded-md mt-4 text-lg font-medium leading-normal font-sans">{{$jobs->job_responsibilities}}</textarea>
+                                <textarea type="text" contenteditable="true" name="responsibilities" class="w-[100%] editeditor rounded-md mt-4 text-lg font-medium leading-normal font-sans">{{$jobs->job_responsibilities}}</textarea>
                               </div>
                               </div>
 
@@ -101,7 +101,7 @@
                                     <label class="text-black text-2xl font-medium leading-normal font-sans" for="jobdescription">Job Description</label><br>
 
                                     <div class="requirement">
-                                        <textarea name="jobdescription" class="w-[100%] summertexteditor h-[200px] mt-4 rounded-md">{{$jobs->job_description}}</textarea>
+                                        <textarea name="jobdescription" class="w-[100%] editeditor h-[200px] mt-4 rounded-md">{{$jobs->job_description}}</textarea>
 
                                     </div>
 
@@ -134,9 +134,14 @@
 
 
 <script>
-$(document).ready(function() {
+let editors = document.querySelectorAll('.editeditor');
 
+editors.forEach(editor => {
 
-  $('.summertexteditor').summernote();
+    ClassicEditor
+        .create(editor)
+        .catch(error => {
+            console.error(error);
+        });
 });
 </script>

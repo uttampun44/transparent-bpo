@@ -1,5 +1,6 @@
 <x-header.header />
 <main>
+
     <section>
         <div class="container mx-auto jobsdescription my-32">
 
@@ -26,54 +27,38 @@
 
                            <div class="job-description">
                               <strong>Job Description</strong>
-
-                              @php
-
-
-                                 $description = $jobs->job_description;
-
-                        $description = preg_replace('#<ol(.*?)>(.*?)</ol>#is', '$2', $description);
-                            @endphp
-
-                               <ul class="list-disc">
-                                <li>
-                                    {!! $description !!}
-                                </li>
-                               </ul>
+                                  <div class="my-2">
+                                    {!! $jobs->job_description !!}
+                                  </div>
                             </div>
 
                             <div class="job-responsibilities">
                               <strong>Responsibilities</strong>
-
-                              @php
-
-
-                              $description = $jobs->job_responsibilities;
-
-                     $responsibilities = preg_replace('#<ol(.*?)>(.*?)</ol>#is', '$2', $description);
-                         @endphp
-
-                               <ul class="list-disc">
-                                   <li>{!! $responsibilities !!}</li>
-                               </ul>
+                                  <div class="my-2">
+                                   {!! $jobs->job_responsibilities!!}
+                                  </div>
                             </div>
 
                             <div class="job-requirements">
                               <strong>Requirements</strong>
+                                 <div class="py-2">
+                                   {!!  $jobs->requirement !!}
+                                 </div>
+                            </div>
 
-                              @php
+                            <div class="overlay-job">
 
-                              $description = $jobs->requirement;
+                            </div>
 
-                     $requirement = preg_replace('#<ol(.*?)>(.*?)</ol>#is', '$2', $description);
-                         @endphp
-                               <ul class="list-disc">
-                                   <li>{!!  $requirement !!}</li>
-                               </ul>
+                            <div class="job_modal">
+                                <div class="close_modal">
+                                      <span>X</span>
+                                </div>
+                                  <input placeholder="Full Name" class="px-4 py-2" />
                             </div>
 
                             <div class="button-apply">
-                              <button>Apply Now</button>
+                                <button id="appylyNow">   <img src="{{asset('images/Suitcase.png')}}" /> Apply for this position</button>
                          </div>
 
                   </div>
@@ -102,11 +87,9 @@
                                          </div>
 
                                             <div class="side-col-description">
-                                                <ul>
-                                                    <li>
+                                                <div>
                                                         {!! $item->job_description !!}
-                                                    </li>
-                                                </ul>
+                                                </div>
                                             </div>
 
                                             <div class="job-salary">
@@ -126,4 +109,6 @@
 
     </section>
 </main>
+
+<script type="text/javascript" defer src="{{asset('js/jobdescription/description.js')}}">  </script>
 <x-footer.footer />

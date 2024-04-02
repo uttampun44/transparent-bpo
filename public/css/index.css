@@ -471,17 +471,63 @@ text-decoration: none;
 }
 .button-apply{
     margin: 1em 0em;
+
 }
 .button-apply button{
-    background-color: rgb(221, 78, 78);
-    color: #fff;
-    width: 10%;
-    padding: .8em .4em;
+    background-color: #FFDE7F;
+    width: 28%;
+    padding: .2em 2em;
     border-radius: 10px;
-    outline: #FAFAFA;
-    border: 1px solid #fff;
     cursor: pointer;
+    color: #000;
+    padding: .8em .4em;
+    outline: #FAFAFA;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+    font-weight: 700;
 }
+.overlay-job {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay-job::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+  }
+
+  .overlay-job {
+    display: none;
+  }
+.job_modal{
+    display: none;
+}
+  .close_modal span{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+ .job_modal.job_modal_display{
+    display: block;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   padding: 1.5em;
+   border-radius: 10px;
+   background-color: #fff;
+ }
+
 .job-details-row
 {
     display: flex;
