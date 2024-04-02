@@ -155,7 +155,16 @@
 </x-app-layout>
 
 <script>
-$(document).ready(function() {
-  $('.editor').summernote();
+
+let editors = document.querySelectorAll('.editor');
+
+editors.forEach(editor => {
+
+    ClassicEditor
+        .create(editor)
+        .catch(error => {
+            console.error(error);
+        });
 });
+
   </script>
