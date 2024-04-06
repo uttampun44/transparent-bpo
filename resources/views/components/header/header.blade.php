@@ -1,3 +1,7 @@
+@php
+    use Illuminate\Support\Facades\Auth;
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +22,24 @@
                <div class="header_login_findjobs">
                      <div class="header_links">
                           <a href="">Find Jobs</a>
-                          <a href="">News Login</a>
+                          <a href="{{route('register')}}">News Login</a>
                      </div>
 
                      <div class="header_login">
-                        <a href="{{url('login')}}"> Login </a>
+                        @php $userWithRole2Exists = false; @endphp
+                        @foreach ($users as $user)
+                            @if($user->role == 2)
+                                @if(Auth::check() && Auth::user()->id == $user->id)
+
+                                    <p>{{ $user->name }}</p>
+                                    @php $userWithRole2Exists = true; @endphp
+                                @endif
+                            @endif
+                        @endforeach
+
+                        @if (!$userWithRole2Exists)
+                            <a href="{{ route('login') }}">Login</a>
+                        @endif
                      </div>
                </div>
          </div>

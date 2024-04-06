@@ -30,15 +30,14 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if(Auth::check()) {
-            $user = Auth::user();
+            $user = Auth::user()->role;
 
-            switch($user->role) {
+            switch($user)
+            {
                 case 1:
                     return redirect()->route('dashboard');
-                    break;
                 case 2:
                     return redirect()->route('user');
-                    break;
                 default:
                     break;
             }
