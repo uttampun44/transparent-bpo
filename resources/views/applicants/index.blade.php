@@ -4,6 +4,9 @@
         <div class="ml-[200px]">
             <div class= "overflow-hidden shadow-sm sm:rounded-lg md:px-8 md:py-8 bg-white">
                 <div class="form-container">
+                    <div class="applicants my-3">
+                        <strong class="fontb-bold text-lg font-sans">Applicants</strong>
+                    </div>
                     <div class="jobs-data">
                         <table class="table-auto">
                             <thead>
@@ -13,8 +16,7 @@
                                     <th class="text-center border-2 w-[5%] px-2">Phone</th>
                                     <th class="text-center border-2 w-[5%] px-2">Email</th>
                                     <th class="text-center border-2 w-[5%] px-2">CV/Resume</th>
-                                    <th class="text-center border-2 w-[5%] px-2">Job Vaccancy</th>
-                                    <th class="text-center border-2 w-[5%] px-2">Update</th>
+                                    <th class="text-center border-2 w-[5%] px-2">Position</th>
                                     <th class="text-center border-2 w-[5%] px-2">Delete</th>
                                 </tr>
                                {{-- @foreach ($jobs as $item)
