@@ -10,7 +10,9 @@
                      <div class="applicants-div  bg-blue-400 px-4 py-4 rounded-md">
                           <div class="row flex justify-between items-center">
                               <div class="para text-white w-[70%]">
-                                  <span class="text-lg font-normal leading-normal">Hello John</span><br>
+                                @foreach ($admins as $admin)
+                                  <span class="text-lg font-normal leading-normal">Hello {{$admin->name}}</span><br>
+                                  @endforeach
                                   <strong class="text-2xl leading-normal font-bold">You have 9 new applicants today!<br> Review applicants</strong>
                               </div>
                               <div class="img w-[30%]">

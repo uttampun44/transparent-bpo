@@ -16,6 +16,9 @@ header{
     background: linear-gradient(180deg, rgba(0, 46, 91, 0.90) 0%, rgba(52, 124, 151, 0.10) 99.99%, rgba(250, 250, 250, 0.00) 100%);
     background-blend-mode: multiply;
 }
+.header_container{
+    padding: 0em 2em;
+}
  .header_rows {
    display: flex;
    justify-content: space-between;
@@ -229,7 +232,7 @@ footer{
 .footer_container{
     max-width: 1300px;
     margin: 0% auto;
-    padding: 4em 0em 2em 0em;
+    padding: 4em 2em 2em 2em;
 }
 .footer_row{
     display: flex;
@@ -451,6 +454,7 @@ text-decoration: none;
 .jobsdescription{
     max-width: 1300px;
     margin: 5em auto;
+    padding: 0em 2em;
 }
 .company-name-img p{
     font-size: 1.5rem;
@@ -528,13 +532,51 @@ text-decoration: none;
  .job_modal.job_modal_display{
     display: block;
    position: absolute;
-   left: 50%;
+   left: 40%;
    top: 50%;
    padding: 1.5em;
    border-radius: 10px;
    background-color: #fff;
+   max-width: 400px;
+   min-width: 400px;
+   margin: 0em auto;
  }
 
+ .previous-next-btn{
+    display: flex;
+    column-gap: 1em;
+ }
+.job-input{
+    display: none;
+    margin: 1.5em 0em;
+}
+.previous-next-btn .previous button{
+    background-color: rgb(192, 75, 75);
+    padding: .5em 1em;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: var(--primary-font-family);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.previous-next-btn .next button{
+    background-color: rgb(68, 150, 68);
+    padding: .5em 1em;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: var(--primary-font-family);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+ .job-input input{
+    width: 100%;
+    padding: .4em;
+ }
 .job-details-row
 {
     display: flex;

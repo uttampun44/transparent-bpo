@@ -2,7 +2,7 @@
 <main>
 
     <section>
-        <div class="container mx-auto jobsdescription my-32">
+        <div class="container mx-auto jobsdescription my-32 px-8">
 
           <div class="job-details-row ">
                   <div class="job_cols">
@@ -51,10 +51,43 @@
                             </div>
 
                             <div class="job_modal">
-                                <div class="close_modal">
-                                      <span>X</span>
+                                <div class="close_modal min-w-[300px] max-w-[400px] mx-auto" style="text-align: right;">
+                                      <span><i class="fa fa-close cursor-pointer"></i></span>
                                 </div>
-                                  <input placeholder="Full Name" class="px-4 py-2" />
+                                 <form method="POST" enctype="multipart/form-data" id="modal_form">
+                                  @csrf
+                                  <div class="job_position">
+                                      <input type="hidden" name="position" />
+                                  </div>
+                                  <div class="user-name">
+                                     <input type="hidden" name="user" />
+                                  </div>
+                                  <div class="job-input">
+                                    <input placeholder="Full Name" class="px-4 py-2 w-full" name="fullname"/>
+                                  </div>
+                                  <div class="job-input">
+                                    <input placeholder="Phone" class="px-4 py-2 w-full" name="phone"/>
+                                  </div>
+                                  <div class="job-input">
+                                    <input placeholder="Email" class="px-4 py-2 w-full" name="email"/>
+                                  </div>
+                                  <div class="job-input">
+                                    <input placeholder="Resume/CV" class="px-4 py-2 w-full" name="resume"/>
+                                  </div>
+                                  <div class="job-input">
+                                    <input placeholder="Position" class="px-4 py-2 w-full" name="position"/>
+                                  </div>
+
+                                  <div class="previous-next-btn">
+                                    <div class="previous">
+                                      <button type="submit">Previous</button>
+                                  </div>
+                                  <div class="next">
+                                    <button type="submit">Previous</button>
+                                  </div>
+                                  </div>
+                                 </form>
+
                             </div>
 
                             <div class="button-apply">
