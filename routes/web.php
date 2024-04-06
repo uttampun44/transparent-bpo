@@ -7,6 +7,8 @@ use App\Http\Controllers\featurejobs\FeatureController;
 use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Middleware\Admin;
+use App\Http\Middleware\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,11 +25,7 @@ Route::get('/', [FeatureController::class, 'index'])->name('home');
 Route::get('/jobscareer/{slug}', [FeatureController::class, 'showJobs'])->name('jobs.show');
 
 
-
-// Route::middleware(['auth', 'role:1'])->group( function(){
-
-// });
-Route::middleware(['auth', 'user:2'])->group( function(){
+Route::middleware(User::class)->group( function(){
 
     Route::get('/user/dashboard', [UserController::class, '__invoke'])->name('user');
 
@@ -36,7 +34,7 @@ Route::middleware(['auth', 'user:2'])->group( function(){
     Route::delete('/user/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'admin:1'])->group(function () {
+Route::middleware(Admin::class)->group(function () {
 
     Route::get('/admin/dashboard', [DashboardController::class, '__invoke'])->name('dashboard');
     Route::get('/admin/profile', [ProfileController::class, 'edit'])->name('profile.edit');
