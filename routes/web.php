@@ -9,6 +9,8 @@ use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\User;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Applicants\ApplicantsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,21 +44,22 @@ Route::middleware(Admin::class)->group(function () {
     Route::delete('/admin/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
      /** job category **/
-     Route::get('/category', [CategoryController::class, 'index'])->name('category');
-     Route::get('/category/create', [CategoryController::class, 'show'])->name('category.show');
-     Route::post('/category/create', [CategoryController::class, 'store'])->name('category.create');
-     Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
-     Route::put('/category/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
+     Route::get('/admin/category', [CategoryController::class, 'index'])->name('category');
+     Route::get('/admin/category/create', [CategoryController::class, 'show'])->name('category.show');
+     Route::post('/admin/category/create', [CategoryController::class, 'store'])->name('category.create');
+     Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+     Route::put('/admin/category/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
      Route::delete('/category/{id}', [CategoryController::class, 'destroy'])->name('category.delete');
 
     /** jobs routes **/
-    Route::get('/jobs', [JobsController::class, 'index'])->name('jobs');
-    Route::get('/jobs/create', [JobsController::class, 'show'])->name('show.jobs');
-    Route::post('/jobs/create', [JobsController::class, 'store'])->name('create.jobs');
-    Route::get('/jobs/update/{id}', [JobsController::class, 'edit'])->name('edit.jobs');
-    Route::put('/jobs/update/{id}', [JobsController::class, 'update'])->name('update.jobs');
-    Route::delete('/jobs/delete/{id}', [JobsController::class, 'destroy'])->name('delete.jobs');
-
+    Route::get('/admin/jobs', [JobsController::class, 'index'])->name('jobs');
+    Route::get('/admin/jobs/create', [JobsController::class, 'show'])->name('show.jobs');
+    Route::post('/admin/jobs/create', [JobsController::class, 'store'])->name('create.jobs');
+    Route::get('/admin/jobs/update/{id}', [JobsController::class, 'edit'])->name('edit.jobs');
+    Route::put('/admin/jobs/update/{id}', [JobsController::class, 'update'])->name('update.jobs');
+    Route::delete('/admin/jobs/delete/{id}', [JobsController::class, 'destroy'])->name('delete.jobs');
+    Route::resource('/admin/users', UsersController::class);
+    Route::get('/admin/applicants', [ApplicantsController::class, '__invoke'])->name('applicants');
 
 });
 

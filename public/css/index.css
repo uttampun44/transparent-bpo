@@ -36,14 +36,21 @@ header{
     background-color: var(--div-bg-color);
     padding: .5em 3em;
     border-radius: var(--primary-border);
-}
-.header_login a{
     color: #000;
     text-decoration: none;
     font-weight: var(--font-weight-normal);
     line-height: var(--font-line-height);
     font-size: 1.5em;
     font-family: var(--primary-font-family);
+}
+
+.header_login a{
+ text-decoration: none;
+ color: #000;
+ font-weight: var(--font-weight-normal);
+ line-height: var(--font-line-height);
+ font-size: 1.2em;
+ font-family: var(--primary-font-family);
 }
 
 .header_login_findjobs .header_links a{
